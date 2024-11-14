@@ -1,0 +1,23 @@
+{
+  "menu": {
+    "about": "O restauraci",
+    "contacts": "Kontakty",
+    "gallery": "Galerie",
+    "home": "Hlavní",
+    "reservation": "Rezervace"
+  },
+  "reservation": {
+    "title": "Rezervace",
+    "form": {
+      "fields": {
+        "date": "Datum",
+        "guests": "Počet obsob: (min. 1)",
+        "name": "Jmeno",
+        "phone": "Telefonní číslo",
+        "time": "Čas"
+      },
+      "text": "Rezervace a objednávky lze provádět kdykoli",
+      "title": "Pro rezervaci prosím vyplňte níže uvedený formulář"
+    }
+  }
+}

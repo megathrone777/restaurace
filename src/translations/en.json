@@ -1,0 +1,23 @@
+{
+  "menu": {
+    "about": "About",
+    "contacts": "Contacts",
+    "gallery": "Gallery",
+    "home": "Home",
+    "reservation": "Reservation"
+  },
+  "reservation": {
+    "title": "Reservation",
+    "form": {
+      "fields": {
+        "date": "Date",
+        "guests": "Guests",
+        "name": "Name",
+        "phone": "Phone number",
+        "time": "Time"
+      },
+      "text": "Moznost reservace restaurace od 12:00 po dohode s maitelem",
+      "title": "Please fill out the form below to make a reservation"
+    }
+  }
+}

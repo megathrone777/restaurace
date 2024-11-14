@@ -1,0 +1,23 @@
+{
+  "menu": {
+    "about": "Über Restaurant",
+    "contacts": "Kontakte",
+    "gallery": "Galerie",
+    "home": "Hauptseite",
+    "reservation": "Reservierung"
+  },
+  "reservation": {
+    "title": "Reservierung",
+    "form": {
+      "fields": {
+        "date": "Date",
+        "guests": "Guests",
+        "name": "Name",
+        "phone": "Phone number",
+        "time": "Time"
+      },
+      "text": "Reservierungen und Bestellungen sind jederzeit möglich",
+      "title": "Bitte füllen Sie das untenstehende Formular aus, um eine Reservierung vorzunehmen"
+    }
+  }
+}
