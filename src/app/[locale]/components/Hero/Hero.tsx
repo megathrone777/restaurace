@@ -16,6 +16,7 @@ import {
   StyledContent,
   StyledTitle,
   StyledText,
+  StyledFlagWrapper,
   StyledFlag,
 } from "./Hero.styled";
 
@@ -76,11 +77,14 @@ const Hero: React.FC = () => {
         </StyledSlider>
       )}
 
-      <StyledFlag
-        alt="Support Ukraine."
-        src="/images/ukraine_img.png"
-        title="We support Ukraine."
-      />
+      <StyledFlagWrapper>
+        <StyledFlag
+          alt="Support Ukraine."
+          src="/images/ukraine_img.png"
+          title={t("support")}
+        />
+        <span>{t("support")}</span>
+      </StyledFlagWrapper>
     </StyledWrapper>
   );
 };

@@ -33,7 +33,7 @@ const fadeInDefaults: CSSObject = {
 
 export const StyledWrapper = styled.div(({ theme: { colors } }) => ({
   borderBottom: `3px solid ${colors.beige}`,
-  height: "calc(100vh + 2px)",
+  height: "100vh",
   marginTop: -80,
   maxHeight: 1100,
   overflow: "hidden",
@@ -118,10 +118,18 @@ export const StyledButtons = styled.div(
   `
 );
 
-export const StyledFlag = styled.img({
+export const StyledFlagWrapper = styled.div({
+  color: "white",
+  fontSize: 15,
   left: 20,
-  maxHeight: 40,
+  lineHeight: "40px",
   position: "absolute",
   top: 100,
   zIndex: 300,
+});
+
+export const StyledFlag = styled.img({
+  marginRight: 10,
+  maxHeight: 40,
+  verticalAlign: "middle",
 });
