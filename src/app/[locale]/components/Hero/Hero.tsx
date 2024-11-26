@@ -16,6 +16,7 @@ import {
   StyledContent,
   StyledTitle,
   StyledText,
+  StyledFlag,
 } from "./Hero.styled";
 
 const sliderOptions: SwiperProps = {
@@ -64,7 +65,9 @@ const Hero: React.FC = () => {
                   <StyledText key={`${key}-text-${index}`}>{text}</StyledText>
 
                   <StyledButtons key={`${key}-buttons-${index}`}>
-                    <Button href="/reservation">{t("reservation.title")}</Button>
+                    <Button href="/reservation">
+                      {t("reservation.title")}
+                    </Button>
                   </StyledButtons>
                 </StyledContent>
               </StyledSlide>
@@ -72,6 +75,12 @@ const Hero: React.FC = () => {
           )}
         </StyledSlider>
       )}
+
+      <StyledFlag
+        alt="Support Ukraine."
+        src="/images/ukraine_img.png"
+        title="We support Ukraine."
+      />
     </StyledWrapper>
   );
 };

@@ -117,3 +117,11 @@ export const StyledButtons = styled.div(
     animation-name: ${fadeInUp};
   `
 );
+
+export const StyledFlag = styled.img({
+  left: 20,
+  maxHeight: 40,
+  position: "absolute",
+  top: 100,
+  zIndex: 300,
+});
