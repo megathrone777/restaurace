@@ -10,14 +10,6 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: false,
   },
-  redirects: async () => [
-    {
-      destination: "https://udlabacu.com/:path*",
-      has: [{ type: "host", value: "www.udlabacu.com" }],
-      permanent: true,
-      source: "/:path*",
-    },
-  ],
   reactStrictMode: false,
 };
 
