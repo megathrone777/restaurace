@@ -8,10 +8,7 @@ const About: React.FC = () => (
       &quot;Tradiční česká restaurace&quot; v centru prahy, kousek od náměstí
       i.p.pavlova
     </p>
-    <p>
-      Restaurace s klasickou českou kuchyní taky hamburgery, těstoviny, saláty a
-      minutkové pokrmy
-    </p>
+    <p>Restaurace s klasickou českou kuchyní</p>
   </StyledWrapper>
 );
 
