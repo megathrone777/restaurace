@@ -1,7 +1,6 @@
 import React from "react";
 
-import { locales } from "~/i18n";
-import { usePathname, useRouter } from "~/navigation";
+import { usePathname, useRouter, routing } from "~/i18n/routing";
 import { Icon } from "~/theme/components";
 import { StyledWrapper, StyledButton } from "./LanguageSwitcher.styled";
 
@@ -14,13 +13,13 @@ const LanguageSwitcher: React.FC = () => {
   }: React.SyntheticEvent<HTMLButtonElement>): void => {
     const selectedLocale = currentTarget.value;
 
-    router.replace(pathname, { locale: selectedLocale });
+    router.replace(pathname, { locale: selectedLocale as TLocale });
   };
 
   return (
     <StyledWrapper>
-      {locales.map(
-        (locale: TLanguage): React.ReactElement => (
+      {routing.locales.map(
+        (locale: TLocale): React.ReactElement => (
           <StyledButton
             key={`language-${locale}`}
             onClick={handleLanguageClick}

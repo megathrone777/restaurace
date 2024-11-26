@@ -1,6 +1,6 @@
 {
   "menu": {
-    "about": "O restauraci",
+    "menu": "Menu",
     "contacts": "Kontakty",
     "gallery": "Galerie",
     "home": "Hlavní",
@@ -16,7 +16,15 @@
         "phone": "Telefonní číslo",
         "time": "Čas"
       },
-      "text": "Rezervace a objednávky lze provádět kdykoli",
+      "errors": {
+        "date": "Datum je povinné pole",
+        "guests": "Minimálně 1 host",
+        "name": "Jméno je povinné pole",
+        "phone": "Telefonní číslo není platné",
+        "time": "Čas je povinné pole"
+      },
+      "submit": "Rezervovat",
+      "text": "Moznost reservace restaurace od 12:00 po dohode s maitelem",
       "title": "Pro rezervaci prosím vyplňte níže uvedený formulář"
     }
   }

@@ -16,14 +16,14 @@ export const StyledLink = styled.a(({ theme: { colors, font, hover } }) => ({
   transition: "color .3s ease",
 
   ...hover({
-    color: colors.orange,
+    color: colors.beige,
   }),
 
   ...font(18, "normal"),
 }));
 
 export const StyledIcon = styled.i(({ theme: { colors } }) => ({
-  color: colors.orange,
+  color: colors.beige,
   display: "inline-flex",
   height: 24,
   marginRight: 6,

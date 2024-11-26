@@ -7,10 +7,10 @@ export type Messages = typeof en;
 declare global {
   interface IntlMessages extends Messages {}
 
-  export type TLanguage = "en" | "cs" | "de";
+  export type TLocale = "en" | "cs" | "de";
 
   export type TMetadataFunction = ({
-    params: { locale: TLanguage },
+    params: { locale: TLocale },
   }) => Promise<Metadata>;
 }
 

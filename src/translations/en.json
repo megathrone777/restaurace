@@ -1,6 +1,6 @@
 {
   "menu": {
-    "about": "About",
+    "menu": "Menu",
     "contacts": "Contacts",
     "gallery": "Gallery",
     "home": "Home",
@@ -11,12 +11,20 @@
     "form": {
       "fields": {
         "date": "Date",
-        "guests": "Guests",
+        "guests": "Guests (min. 1)",
         "name": "Name",
         "phone": "Phone number",
         "time": "Time"
       },
-      "text": "Moznost reservace restaurace od 12:00 po dohode s maitelem",
+      "errors": {
+        "date": "Date is required field",
+        "guests": "Minimum 1 guest",
+        "name": "Name is required field",
+        "phone": "Phone number is not valid",
+        "time": "Time is required field"
+      },
+      "submit": "Reserve",
+      "text": "Possibility of restaurant reservation from 12:00 after agreement with the owner",
       "title": "Please fill out the form below to make a reservation"
     }
   }

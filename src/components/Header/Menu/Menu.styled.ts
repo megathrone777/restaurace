@@ -1,4 +1,4 @@
-import { Link } from "~/navigation";
+import { Link } from "~/i18n/routing";
 import { styled } from "~/theme";
 
 export const StyledWrapper = styled.div({});
@@ -16,13 +16,13 @@ export const StyledLink = styled(Link)(
     textTransform: "uppercase",
 
     "&.active": {
-      color: colors.orange,
+      color: colors.beige,
     },
 
     ...font(17, "medium"),
 
     ...hover({
-      color: colors.orange,
+      color: colors.beige,
     }),
   })
 );

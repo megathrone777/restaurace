@@ -2,8 +2,10 @@
 import React from "react";
 
 import { Container } from "~/theme/components";
+import { About } from "./About";
 import { Contacts } from "./Contacts";
 import { Copyright } from "./Copyright";
+import { Menu } from "./Menu";
 import {
   StyledWrapper,
   StyledLayout,
@@ -17,6 +19,7 @@ const Footer: React.FC = () => (
       <StyledLayout>
         <StyledColumn>
           <StyledTitle>about us</StyledTitle>
+          <About />
         </StyledColumn>
 
         <StyledColumn>
@@ -25,6 +28,7 @@ const Footer: React.FC = () => (
 
         <StyledColumn>
           <StyledTitle>quick links</StyledTitle>
+          <Menu />
         </StyledColumn>
 
         <StyledColumn>

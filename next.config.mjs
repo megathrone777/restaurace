@@ -10,7 +10,6 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: false,
   },
-  output: "standalone",
   reactStrictMode: false,
 };
 

@@ -8,9 +8,9 @@ const GlobalStyle = createGlobalStyle(({ theme: { colors } }) => ({
   },
 
   body: {
-    backgroundColor: colors.green,
+    color: colors.blue,
     fontFamily: "var(--font-oswald)",
-    fontSize: 16,
+    fontSize: 18,
     position: "relative",
   },
 

@@ -5,4 +5,5 @@ const Page: React.FC = () => {
   notFound();
 };
 
+export { metadata } from "./metadata";
 export default Page;

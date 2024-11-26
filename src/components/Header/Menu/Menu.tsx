@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 
-import { usePathname } from "~/navigation";
+import { usePathname } from "~/i18n/routing";
 import { items } from "./Menu.data";
 import type { TMenuItem } from "./Menu.types";
 import { StyledWrapper, StyledList, StyledLink } from "./Menu.styled";

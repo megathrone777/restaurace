@@ -1,7 +1,7 @@
 export interface TColors {
-  green: string;
-  greenDarker: string;
-  orange: string;
+  beige: string;
+  blue: string;
+  red: string;
   white: string;
 }
 

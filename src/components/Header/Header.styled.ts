@@ -1,7 +1,7 @@
 import { styled } from "~/theme";
 
-export const StyledWrapper = styled.div(({ theme: { colors } }) => ({
-  backgroundColor: "transparent",
+export const StyledWrapper = styled.div({
+  backgroundColor: "rgba(0, 0, 0, .6)",
   height: 80,
   position: "sticky",
   transition: "background-color .5s ease-in-out",
@@ -9,9 +9,9 @@ export const StyledWrapper = styled.div(({ theme: { colors } }) => ({
   zIndex: 900,
 
   "&.scrolled": {
-    backgroundColor: colors.green,
+    backgroundColor: "black",
   },
-}));
+});
 
 export const StyledLayout = styled.div({
   display: "flex",

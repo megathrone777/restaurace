@@ -1,9 +1,9 @@
 import type { TColors } from "./types";
 
 const colors: TColors = {
-  green: "#121b18",
-  greenDarker: "#121a1f",
-  orange: "#ee5614",
+  beige: "#c39c5e",
+  blue: "#0e1317",
+  red: "#ff7f7f",
   white: "#faf7f2",
 };
 

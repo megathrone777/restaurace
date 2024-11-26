@@ -35,7 +35,9 @@ export const POST = async (request: NextRequest): Promise<Response> => {
       {
         body: JSON.stringify({
           chat_id: -4507786399,
-          text: `RESERVACE №10 \n\n ${message.join("\n\n")} \n===============================`,
+          text: `RESERVACE №${Date.now()} \n\n ${message.join(
+            "\n\n"
+          )} \n===============================`,
         }),
         headers: {
           "Content-Type": "application/json",
@@ -44,7 +46,9 @@ export const POST = async (request: NextRequest): Promise<Response> => {
       }
     );
 
-    console.log(response);
+    if (response.ok) {
+      return NextResponse.json({ name: "Hello" });
+    }
 
     return NextResponse.json({ name: "Hello" });
   } catch (error) {

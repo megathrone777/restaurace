@@ -6,4 +6,5 @@ export interface TProps
     HTMLButtonElement
   > {
   children: React.ReactNode;
+  href?: string;
 }

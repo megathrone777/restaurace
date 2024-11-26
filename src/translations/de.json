@@ -1,6 +1,6 @@
 {
   "menu": {
-    "about": "Über Restaurant",
+    "menu": "Speisekarte",
     "contacts": "Kontakte",
     "gallery": "Galerie",
     "home": "Hauptseite",
@@ -10,12 +10,20 @@
     "title": "Reservierung",
     "form": {
       "fields": {
-        "date": "Date",
-        "guests": "Guests",
+        "date": "Datum",
+        "guests": "Gäste (min. 1)",
         "name": "Name",
-        "phone": "Phone number",
-        "time": "Time"
+        "phone": "Telefonnummer",
+        "time": "Zeit"
       },
+      "errors": {
+        "date": "Das Datum ist ein Pflichtfeld",
+        "guests": "Mindestens 1 Gast",
+        "name": "Name ist ein Pflichtfeld",
+        "phone": "Die Telefonnummer ist ungültig",
+        "time": "Zeit ist ein Pflichtfeld"
+      },
+      "submit": "Buch",
       "text": "Reservierungen und Bestellungen sind jederzeit möglich",
       "title": "Bitte füllen Sie das untenstehende Formular aus, um eine Reservierung vorzunehmen"
     }

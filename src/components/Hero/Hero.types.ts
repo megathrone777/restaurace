@@ -1,5 +1,4 @@
-export interface TSliderItem {
-  image: string;
-  text: string;
+export interface TProps {
+  imageURL: string;
   title: string;
 }

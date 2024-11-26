@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 
-import { Media } from "~/components";
+import { Hero } from "~/components";
 import { Container } from "~/theme/components";
 import { Form } from "./components";
 
@@ -9,8 +9,8 @@ const Page: React.FC = () => {
   const t = useTranslations();
 
   return (
-    <div style={{ backgroundColor: "white" }}>
-      <Media title={t("reservation.title")} />
+    <div>
+      <Hero imageURL="/images/hero/reservation_img.jpg" title={t("reservation.title")} />
 
       <Container>
         <Form />

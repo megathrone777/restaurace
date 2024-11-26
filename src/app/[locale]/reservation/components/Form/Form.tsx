@@ -2,34 +2,44 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 import { useFormik } from "formik";
-import { object, string } from "yup";
+import { number, object, string } from "yup";
 
-import { Button } from "~/theme/components";
+import { Button, Input } from "~/theme/components";
+import type { TProps as TIconProps } from "~/theme/components/Icon/Icon.types";
+import { Phone } from "./Phone";
 import { formFields } from "./Form.data";
 import type { TFormField } from "./Form.types";
 import {
   StyledWrapper,
+  StyledLayout,
   StyledTitle,
   StyledHint,
-  StyledItem,
-  // StyledLabel,
-  StyledInput,
 } from "./Form.styled";
 
 const phonePattern =
   /\(?\+[0-9]{1,3}\)? ?-?[0-9]{1,3} ?-?[0-9]{3,5} ?-?[0-9]{4}( ?-?[0-9]{3})?/;
 
-const validationSchema = object().shape({
-  date: string().required(),
-  guests: string().required(),
-  name: string().required(),
-  phone: string().matches(phonePattern, "Phone number is not valid").required(),
-  time: string().required(),
-});
-
 const Form: React.FC = () => {
   const t = useTranslations();
-  const { errors, handleBlur, handleChange, handleSubmit } = useFormik({
+  const validationSchema = object().shape({
+    date: string().required(t("reservation.form.errors.date")),
+    guests: number()
+      .min(1, t("reservation.form.errors.guests"))
+      .required(t("reservation.form.errors.guests")),
+    name: string().required(t("reservation.form.errors.name")),
+    phone: string()
+      .matches(phonePattern, t("reservation.form.errors.phone"))
+      .required(t("reservation.form.errors.phone")),
+    time: string().required(t("reservation.form.errors.time")),
+  });
+  const {
+    errors,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+    touched,
+    setFieldValue,
+  } = useFormik({
     initialValues: {
       date: "",
       guests: "",
@@ -39,46 +49,61 @@ const Form: React.FC = () => {
     },
 
     onSubmit: async (values) => {
-      console.log(values);
-      // const response = await fetch("/api/contacts", {
-      //   body: JSON.stringify(values),
-      //   method: "POST",
-      // });
-
-      // console.log(response);
+      await fetch("/api/contacts", {
+        body: JSON.stringify(values),
+        method: "POST",
+      });
     },
 
     validationSchema,
+    validateOnBlur: true,
   });
+
+  const handlePhoneChange = (value: string): void => {
+    console.log(value);
+    setFieldValue("phone", value);
+  };
 
   return (
     <StyledWrapper>
       {formFields && !!formFields.length && (
         <form action="#" method="POST" onSubmit={handleSubmit}>
           <StyledTitle>{t("reservation.form.title")}</StyledTitle>
+          <StyledHint>{t("reservation.form.text")}</StyledHint>
 
-          <StyledHint>
-            Moznost reservace restaurace od 12:00 po dohode s maitelem
-          </StyledHint>
+          {formFields && !!formFields.length && (
+            <StyledLayout>
+              {formFields.map(
+                ({ id, label, name, type }: TFormField): React.ReactElement => {
+                  if (type === "tel") {
+                    return (
+                      <Phone
+                        {...{ id, name }}
+                        error={errors[id] && touched[id] ? errors[id] : null}
+                        key={`${id}-reservation-form-item`}
+                        onBlur={handleBlur}
+                        onChange={handlePhoneChange}
+                      />
+                    );
+                  }
 
-          {formFields.map(
-            ({ id, name, type }: TFormField): React.ReactElement => (
-              <StyledItem key={`${id}-reservation-form-item`}>
-                {/* <StyledLabel htmlFor={id}>
-                  {t(`reservation.form.fields.${label}`)}:
-                </StyledLabel> */}
-
-                <StyledInput
-                  {...{ id, name, type }}
-                  onBlur={handleBlur}
-                  onChange={handleChange}
-                />
-                {Boolean(errors[id]) && <p>{errors[id]}</p>}
-              </StyledItem>
-            )
+                  return (
+                    <Input
+                      {...{ id, name, type }}
+                      error={errors[id] && touched[id] ? errors[id] : null}
+                      iconID={name as TIconProps["id"]}
+                      key={`${id}-reservation-form-item`}
+                      onBlur={handleBlur}
+                      onChange={handleChange}
+                      placeholder={t(`reservation.form.fields.${label}`)}
+                    />
+                  );
+                }
+              )}
+            </StyledLayout>
           )}
 
-          <Button>Rezervovat</Button>
+          <Button type="submit">{t("reservation.form.submit")}</Button>
         </form>
       )}
     </StyledWrapper>
