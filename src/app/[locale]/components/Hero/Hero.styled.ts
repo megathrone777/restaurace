@@ -70,7 +70,8 @@ export const StyledImage = styled.img({
 export const StyledContent = styled.div({
   left: 0,
   marginInline: "auto",
-  maxWidth: 1440,
+  maxWidth: 1480,
+  paddingInline: 10,
   position: "absolute",
   right: 0,
   top: "50%",
