@@ -14,5 +14,5 @@ const Page: React.FC = () => {
   );
 };
 
-export { generateMetadata } from "./generateMetadata";
+export { metadata } from "./metadata";
 export default Page;

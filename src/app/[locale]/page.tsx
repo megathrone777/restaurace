@@ -13,5 +13,5 @@ const Page: React.FC = () => (
   </React.Fragment>
 );
 
-export { generateMetadata } from "./generateMetadata";
+export { metadata } from "./metadata";
 export default Page;
