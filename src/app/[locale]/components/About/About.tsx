@@ -22,7 +22,7 @@ const About: React.FC = () => (
         </p>
         <p>
           MOŽNOST POŘÁDÁNÍ SVATEB FIREMNÍCH AKCÍ, NAROZENINOVÝCH OSLAV NEBO
-          RAUTŮ NA ČEPU: PILSNER URQUELL VELKOPPOPOVICKÝ KOZEL 11° ČERNÝ KOZEL,
+          RAUTŮ, NA ČEPU: PILSNER URQUELL VELKOPPOPOVICKÝ KOZEL 11° ČERNÝ KOZEL,
           RADEGAST MÍCHANÉ DRINKY, VÍNA A RŮZNÉ DRUHY NEALKO NAPOJI
         </p>
         <p>

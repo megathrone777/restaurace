@@ -1,12 +1,16 @@
 import { styled } from "~/theme";
 
-export const StyledWrapper = styled.div({
+export const StyledWrapper = styled.div(({ theme: { devices } }) => ({
   alignItems: "center",
   columnGap: 10,
   display: "flex",
-});
 
-export const StyledButton = styled.button({
+  [devices.tablet]: {
+    columnGap: 25,
+  },
+}));
+
+export const StyledButton = styled.button(({ theme: { devices } }) => ({
   backgroundColor: "transparent",
   border: "none",
   borderRadius: 2,
@@ -15,4 +19,9 @@ export const StyledButton = styled.button({
   overflow: "hidden",
   padding: 0,
   width: 27,
-});
+
+  [devices.tablet]: {
+    transformOrigin: "center",
+    transform: "scale(1.3)",
+  },
+}));

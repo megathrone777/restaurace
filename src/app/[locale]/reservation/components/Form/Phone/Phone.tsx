@@ -10,7 +10,7 @@ import type { TProps } from "./Phone.types";
 import { StyledWrapper, StyledLabel, StyledFlag } from "./Phone.styled";
 
 const Phone: React.FC<TProps> = ({ error, id, onBlur, onChange }) => {
-  const { colors } = useTheme();
+  const { colors, devices } = useTheme();
   const telephone = useTelephone({
     initialValue: `+${getCountryCallingCode("CZ")}`,
   });
@@ -74,6 +74,10 @@ const Phone: React.FC<TProps> = ({ error, id, onBlur, onChange }) => {
             menu: (baseStyles) => ({
               ...baseStyles,
               marginTop: 60,
+
+              [devices.desktop]: {
+                marginTop: 55,
+              },
             }),
 
             menuList: (baseStyles) => ({

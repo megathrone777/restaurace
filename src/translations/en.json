@@ -1,4 +1,10 @@
 {
+  "footer": {
+    "about": "about us",
+    "contacts": "contact us",
+    "menu": "quick links",
+    "time": "opening hours"
+  },
   "menu": {
     "menu": "Menu",
     "contacts": "Contacts",
@@ -7,7 +13,6 @@
     "reservation": "Reservation"
   },
   "reservation": {
-    "title": "Reservation",
     "form": {
       "fields": {
         "date": "Date",
@@ -25,8 +30,12 @@
       },
       "submit": "Reserve",
       "text": "Possibility of restaurant reservation from 12:00 after agreement with the owner",
+      "success": "Your reservation has been successfully received",
+      "successText": "We look forward to seeing you",
       "title": "Please fill out the form below to make a reservation"
-    }
+    },
+    "title": "Reservation"
   },
+  "schedule": "Monday - Sunday: 16:00 - 2:00",
   "support": "We support Ukraine."
 }

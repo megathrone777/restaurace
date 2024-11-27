@@ -7,20 +7,26 @@ export const StyledItem = styled.li({
   lineHeight: "45px",
 });
 
-export const StyledLink = styled.a(({ theme: { colors, font, hover } }) => ({
-  alignItems: "center",
-  color: "white",
-  display: "inline-flex",
-  height: "100%",
-  textDecoration: "none",
-  transition: "color .3s ease",
+export const StyledLink = styled.a(
+  ({ theme: { colors, devices, font, hover } }) => ({
+    alignItems: "center",
+    color: "white",
+    display: "inline-flex",
+    height: "100%",
+    textDecoration: "none",
+    transition: "color .3s ease",
 
-  ...hover({
-    color: colors.beige,
-  }),
+    ...hover({
+      color: colors.beige,
+    }),
 
-  ...font(18, "normal"),
-}));
+    ...font(18, "normal"),
+
+    [devices.desktop]: {
+      fontSize: 16,
+    },
+  })
+);
 
 export const StyledIcon = styled.i(({ theme: { colors } }) => ({
   color: colors.beige,

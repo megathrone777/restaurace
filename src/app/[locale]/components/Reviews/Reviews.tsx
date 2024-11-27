@@ -26,11 +26,25 @@ const sliderOptions: SwiperProps = {
     delay: 4000,
     pauseOnMouseEnter: true,
   },
+  breakpoints: {
+    1480: {
+      slidesPerView: 5,
+    },
+    1250: {
+      slidesPerView: 4,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+    600: {
+      slidesPerView: 2,
+    },
+  },
   effect: "slide",
   loop: true,
   modules: [Autoplay],
-  slidesPerView: 5,
-  spaceBetween: 20,
+  slidesPerView: 1,
+  spaceBetween: 10,
   speed: 1000,
 };
 

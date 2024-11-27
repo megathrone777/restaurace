@@ -1,10 +1,19 @@
 import { styled } from "~/theme";
 
-export const StyledWrapper = styled.div({
+export const StyledWrapper = styled.div(({ theme: { devices } }) => ({
   height: 56,
   marginBottom: 30,
   position: "relative",
-});
+
+  [devices.desktop]: {
+    height: 50,
+    marginBottom: 20,
+  },
+
+  [devices.tablet]: {
+    marginBottom: 18,
+  },
+}));
 
 export const StyledInput = styled.input(({ theme: { colors, font } }) => ({
   appearance: "none",
@@ -46,9 +55,17 @@ export const StyledIcon = styled.i({
   },
 });
 
-export const StyledError = styled.p({
+export const StyledError = styled.p(({ theme: { devices } }) => ({
   color: "red",
   fontSize: 14,
   paddingLeft: 10,
   textAlign: "left",
-});
+
+  [devices.desktop]: {
+    fontSize: 12,
+  },
+
+  [devices.desktop]: {
+    fontSize: 11,
+  },
+}));

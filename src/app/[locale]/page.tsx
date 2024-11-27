@@ -2,7 +2,8 @@ import React from "react";
 import "swiper/css";
 import "swiper/css/effect-fade";
 
-import { About, Hero, Media, Reviews } from "./components";
+import { Media } from "~/components";
+import { About, Hero, Reviews } from "./components";
 
 const Page: React.FC = () => (
   <React.Fragment>

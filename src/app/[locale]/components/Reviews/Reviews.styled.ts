@@ -2,17 +2,34 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import { styled } from "~/theme";
 
-export const StyledWrapper = styled.div(({ theme: { colors } }) => ({
+export const StyledWrapper = styled.div(({ theme: { colors, devices } }) => ({
   backgroundColor: colors.white,
   borderBottom: `3px solid ${colors.beige}`,
   paddingBlock: "50px 60px",
   textAlign: "center",
+
+  [devices.desktop]: {
+    paddingBlock: "30px 40px",
+  },
+
+  [devices.tablet]: {
+    paddingBlock: "20px 30px",
+  },
 }));
 
-export const StyledTitle = styled.h2({
+export const StyledTitle = styled.h2(({ theme: { devices } }) => ({
   fontSize: 40,
   marginBottom: 25,
-});
+
+  [devices.desktop]: {
+    fontSize: 35,
+  },
+
+  [devices.tablet]: {
+    fontSize: 32,
+    marginBottom: 15,
+  },
+}));
 
 export const StyledSlider = styled(Swiper)({
   height: "100%",

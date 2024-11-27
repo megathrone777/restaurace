@@ -11,3 +11,10 @@ export interface TFonts {
   normal: number;
   semiBold: number;
 }
+
+export interface TDevices {
+  desktop: string;
+  mobile: string;
+  mobileSm: string;
+  tablet: string;
+}

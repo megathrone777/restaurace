@@ -1,4 +1,10 @@
 {
+  "footer": {
+    "about": "über uns",
+    "contacts": "Kontaktieren Sie",
+    "menu": "Quicklinks",
+    "time": "Öffnungszeiten"
+  },
   "menu": {
     "menu": "Speisekarte",
     "contacts": "Kontakte",
@@ -7,7 +13,6 @@
     "reservation": "Reservierung"
   },
   "reservation": {
-    "title": "Reservierung",
     "form": {
       "fields": {
         "date": "Datum",
@@ -25,8 +30,12 @@
       },
       "submit": "Buch",
       "text": "Reservierungen und Bestellungen sind jederzeit möglich",
+      "success": "Ihre Reservierung wurde erfolgreich empfangen",
+      "successText": "Wir freuen uns auf Sie",
       "title": "Bitte füllen Sie das untenstehende Formular aus, um eine Reservierung vorzunehmen"
-    }
+    },
+    "title": "Reservierung"
   },
+  "schedule": "Montag - Sonntag: 16:00 - 2:00",
   "support": "Wir unterstützen die Ukraine."
 }

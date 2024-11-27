@@ -1,10 +1,14 @@
 import { styled } from "~/theme";
 
-export const StyledWrapper = styled.div(({ theme: { colors } }) => ({
+export const StyledWrapper = styled.div(({ theme: { colors, devices } }) => ({
   background: "url(/images/hero/menu_img.jpg) center center/cover no-repeat",
   borderBottom: `3px solid ${colors.beige}`,
   height: 300,
   position: "relative",
+
+  [devices.desktop]: {
+    height: 220,
+  },
 
   "&::before": {
     backgroundColor: "rgba(0, 0, 0, .6)",

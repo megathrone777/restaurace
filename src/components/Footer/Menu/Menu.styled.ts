@@ -3,12 +3,18 @@ import { styled } from "~/theme";
 
 export const StyledWrapper = styled.div({});
 
-export const StyledList = styled.ul({});
+export const StyledList = styled.ul(({ theme: { devices } }) => ({
+  columnCount: 2,
+
+  [devices.tablet]: {
+    maxWidth: 350,
+  },
+}));
 
 export const StyledItem = styled.li({});
 
 export const StyledLink = styled(Link)(
-  ({ theme: { colors, font, hover } }) => ({
+  ({ theme: { colors, devices, font, hover } }) => ({
     color: "white",
     lineHeight: "45px",
     transition: "color .15s ease-in-out",
@@ -33,5 +39,9 @@ export const StyledLink = styled(Link)(
     ...hover({
       color: colors.beige,
     }),
+
+    [devices.desktop]: {
+      fontSize: 16,
+    },
   })
 );

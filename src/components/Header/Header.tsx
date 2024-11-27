@@ -6,11 +6,26 @@ import { Container } from "~/theme/components";
 import { Logo } from "./Logo";
 import { Menu } from "./Menu";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-import { StyledWrapper, StyledLayout, StyledContent } from "./Header.styled";
+import {
+  StyledWrapper,
+  StyledLayout,
+  StyledContent,
+  StyledBurger,
+  StyledBurgerHelper,
+} from "./Header.styled";
 
 const Header: React.FC = () => {
   const pathname = usePathname();
+  const [opened, toggleOpened] = useState<boolean>(false);
   const [scrolled, toggleScrolled] = useState<boolean>(false);
+
+  const handleBurgerToggle = (): void => {
+    toggleOpened(!opened);
+  };
+
+  useEffect((): void => {
+    toggleOpened(false);
+  }, [pathname]);
 
   useEffect((): void => {
     if (typeof window !== "undefined") {
@@ -33,10 +48,20 @@ const Header: React.FC = () => {
         <StyledLayout>
           <Logo />
 
-          <StyledContent>
+          <StyledContent className={opened ? "opened" : ""}>
             <Menu />
             <LanguageSwitcher />
           </StyledContent>
+
+          <StyledBurger
+            className={opened ? "opened" : ""}
+            onClick={handleBurgerToggle}
+            type="button"
+          >
+            <StyledBurgerHelper />
+            <StyledBurgerHelper />
+            <StyledBurgerHelper />
+          </StyledBurger>
         </StyledLayout>
       </Container>
     </StyledWrapper>

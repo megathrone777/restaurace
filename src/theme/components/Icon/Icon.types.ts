@@ -8,5 +8,7 @@ export interface TProps {
     | "location"
     | "google"
     | "tripadvisor"
-    | "name";
+    | "name"
+    | "time"
+    | "date";
 }

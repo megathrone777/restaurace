@@ -47,11 +47,11 @@ export const POST = async (request: NextRequest): Promise<Response> => {
     );
 
     if (response.ok) {
-      return NextResponse.json({ name: "Hello" });
+      return NextResponse.json({ success: true });
     }
 
-    return NextResponse.json({ name: "Hello" });
+    return NextResponse.json({ success: false });
   } catch (error) {
-    return NextResponse.json({ name: "Hello" });
+    return NextResponse.json({ success: false });
   }
 };

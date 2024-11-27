@@ -1,7 +1,6 @@
 import React from "react";
 import Script from "next/script";
 import { NextIntlClientProvider, useMessages } from "next-intl";
-import { notFound } from "next/navigation";
 
 import { Footer, Header, ThemeRegistry } from "~/components";
 import { GlobalStyle } from "~/theme";
@@ -12,8 +11,6 @@ const GTM_ID = "GTM-PTDGKLZG";
 
 const Layout: React.FC<TProps> = ({ children, params: { locale } }) => {
   const messages = useMessages();
-
-  notFound();
 
   return (
     <html className={font.variable} lang={locale}>

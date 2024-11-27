@@ -1,11 +1,13 @@
 "use client";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 import { Container } from "~/theme/components";
 import { About } from "./About";
 import { Contacts } from "./Contacts";
 import { Copyright } from "./Copyright";
 import { Menu } from "./Menu";
+import { Time } from "./Time";
 import {
   StyledWrapper,
   StyledLayout,
@@ -13,33 +15,38 @@ import {
   StyledTitle,
 } from "./Footer.styled";
 
-const Footer: React.FC = () => (
-  <StyledWrapper>
-    <Container>
-      <StyledLayout>
-        <StyledColumn>
-          <StyledTitle>about us</StyledTitle>
-          <About />
-        </StyledColumn>
+const Footer: React.FC = () => {
+  const t = useTranslations();
 
-        <StyledColumn>
-          <StyledTitle>opening hours</StyledTitle>
-        </StyledColumn>
+  return (
+    <StyledWrapper>
+      <Container>
+        <StyledLayout>
+          <StyledColumn>
+            <StyledTitle>{t("footer.about")}</StyledTitle>
+            <About />
+          </StyledColumn>
 
-        <StyledColumn>
-          <StyledTitle>quick links</StyledTitle>
-          <Menu />
-        </StyledColumn>
+          <StyledColumn>
+            <StyledTitle>{t("footer.time")}</StyledTitle>
+            <Time />
+          </StyledColumn>
 
-        <StyledColumn>
-          <StyledTitle>contact us</StyledTitle>
-          <Contacts />
-        </StyledColumn>
-      </StyledLayout>
+          <StyledColumn>
+            <StyledTitle>{t("footer.menu")}</StyledTitle>
+            <Menu />
+          </StyledColumn>
 
-      <Copyright />
-    </Container>
-  </StyledWrapper>
-);
+          <StyledColumn>
+            <StyledTitle>{t("footer.contacts")}</StyledTitle>
+            <Contacts />
+          </StyledColumn>
+        </StyledLayout>
+
+        <Copyright />
+      </Container>
+    </StyledWrapper>
+  );
+};
 
 export { Footer };

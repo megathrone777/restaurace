@@ -3,13 +3,24 @@ import { styled } from "~/theme";
 
 export const StyledWrapper = styled.div({});
 
-export const StyledList = styled.ul({
+export const StyledList = styled.ul(({ theme: { devices } }) => ({
   columnGap: 60,
   display: "flex",
-});
+
+  [devices.desktop]: {
+    columnGap: 50,
+  },
+
+  [devices.tablet]: {
+    alignItems: "center",
+    columnGap: "unset",
+    flexDirection: "column",
+    rowGap: 30,
+  },
+}));
 
 export const StyledLink = styled(Link)(
-  ({ theme: { colors, font, hover } }) => ({
+  ({ theme: { colors, devices, font, hover } }) => ({
     color: "white",
     transition: "color .15s ease-in-out",
     textDecoration: "none",
@@ -24,5 +35,13 @@ export const StyledLink = styled(Link)(
     ...hover({
       color: colors.beige,
     }),
+
+    [devices.desktop]: {
+      fontSize: 16,
+    },
+
+    [devices.tablet]: {
+      fontSize: 24,
+    },
   })
 );

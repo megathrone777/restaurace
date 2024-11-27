@@ -31,12 +31,20 @@ const fadeInDefaults: CSSObject = {
   animationDuration: "1s",
 };
 
-export const StyledWrapper = styled.div(({ theme: { colors } }) => ({
+export const StyledWrapper = styled.div(({ theme: { colors, devices } }) => ({
   borderBottom: `3px solid ${colors.beige}`,
-  height: "100vh",
+  height: "calc(100vh + 3px)",
   marginTop: -80,
   maxHeight: 1100,
   overflow: "hidden",
+
+  [devices.desktop]: {
+    height: "80vh",
+  },
+
+  [devices.tablet]: {
+    height: 400,
+  },
 }));
 
 export const StyledSlider = styled(Swiper)({
@@ -67,7 +75,7 @@ export const StyledImage = styled.img({
   width: "100%",
 });
 
-export const StyledContent = styled.div({
+export const StyledContent = styled.div(({ theme: { devices } }) => ({
   left: 0,
   marginInline: "auto",
   maxWidth: 1480,
@@ -76,10 +84,14 @@ export const StyledContent = styled.div({
   right: 0,
   top: "50%",
   transform: "translateY(-50%)",
-});
+
+  [devices.desktop]: {
+    top: "calc(50% + 40px)",
+  },
+}));
 
 export const StyledTitle = styled.h2(
-  ({ theme: { font } }) => ({
+  ({ theme: { devices, font } }) => ({
     ...fadeInDefaults,
     animationDelay: "0.2s",
     color: "white",
@@ -87,6 +99,14 @@ export const StyledTitle = styled.h2(
     marginBottom: 10,
     textTransform: "uppercase",
     ...font(70, "semiBold"),
+
+    [devices.desktop]: {
+      fontSize: 55,
+    },
+
+    [devices.tablet]: {
+      fontSize: 36,
+    },
   }),
   () => css`
     animation-name: ${fadeInDown};
@@ -94,7 +114,7 @@ export const StyledTitle = styled.h2(
 );
 
 export const StyledText = styled.p(
-  ({ theme: { font } }) => ({
+  ({ theme: { devices, font } }) => ({
     ...fadeInDefaults,
     animationDelay: "0.4s",
     color: "white",
@@ -102,6 +122,14 @@ export const StyledText = styled.p(
     marginBottom: 30,
     textTransform: "uppercase",
     ...font(29, "medium"),
+
+    [devices.desktop]: {
+      fontSize: 22,
+    },
+
+    [devices.tablet]: {
+      fontSize: 18,
+    },
   }),
   () => css`
     animation-name: ${fadeInDown};
@@ -118,18 +146,37 @@ export const StyledButtons = styled.div(
   `
 );
 
-export const StyledFlagWrapper = styled.div({
+export const StyledFlagWrapper = styled.div(({ theme: { devices } }) => ({
   color: "white",
-  fontSize: 15,
+  fontSize: 17,
   left: 20,
   lineHeight: "40px",
   position: "absolute",
   top: 100,
   zIndex: 300,
-});
 
-export const StyledFlag = styled.img({
+  [devices.desktop]: {
+    fontSize: 16,
+    left: 10,
+    lineHeight: "30px",
+    top: 80,
+  },
+
+  [devices.tablet]: {
+    fontSize: 14,
+  },
+}));
+
+export const StyledFlag = styled.img(({ theme: { devices } }) => ({
   marginRight: 10,
   maxHeight: 40,
   verticalAlign: "middle",
-});
+
+  [devices.desktop]: {
+    maxHeight: 30,
+  },
+
+  [devices.tablet]: {
+    maxHeight: 20,
+  },
+}));

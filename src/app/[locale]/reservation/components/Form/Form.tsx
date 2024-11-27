@@ -1,16 +1,17 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { useTranslations } from "next-intl";
 import { useFormik } from "formik";
 import { number, object, string } from "yup";
 
-import { Button, Input } from "~/theme/components";
+import { Button, Container, Input, Spinner } from "~/theme/components";
 import type { TProps as TIconProps } from "~/theme/components/Icon/Icon.types";
 import { Phone } from "./Phone";
 import { formFields } from "./Form.data";
 import type { TFormField } from "./Form.types";
 import {
   StyledWrapper,
+  StyledForm,
   StyledLayout,
   StyledTitle,
   StyledHint,
@@ -21,6 +22,7 @@ const phonePattern =
 
 const Form: React.FC = () => {
   const t = useTranslations();
+  const [success, toggleSuccess] = useState<boolean>(false);
   const validationSchema = object().shape({
     date: string().required(t("reservation.form.errors.date")),
     guests: number()
@@ -37,8 +39,9 @@ const Form: React.FC = () => {
     handleBlur,
     handleChange,
     handleSubmit,
-    touched,
+    isSubmitting,
     setFieldValue,
+    touched,
   } = useFormik({
     initialValues: {
       date: "",
@@ -49,10 +52,19 @@ const Form: React.FC = () => {
     },
 
     onSubmit: async (values) => {
-      await fetch("/api/contacts", {
+      const response = await fetch("/api/contacts", {
         body: JSON.stringify(values),
         method: "POST",
       });
+      const data = (await response.json()) as { success: boolean };
+
+      if (response.ok && data && data.success) {
+        toggleSuccess(true);
+
+        return;
+      }
+
+      toggleSuccess(false);
     },
 
     validationSchema,
@@ -60,52 +72,78 @@ const Form: React.FC = () => {
   });
 
   const handlePhoneChange = (value: string): void => {
-    console.log(value);
     setFieldValue("phone", value);
   };
 
   return (
     <StyledWrapper>
-      {formFields && !!formFields.length && (
-        <form action="#" method="POST" onSubmit={handleSubmit}>
-          <StyledTitle>{t("reservation.form.title")}</StyledTitle>
-          <StyledHint>{t("reservation.form.text")}</StyledHint>
+      <Container>
+        {success ? (
+          <React.Fragment>
+            <StyledTitle>{t("reservation.form.success")}</StyledTitle>
+            <StyledHint>{t("reservation.form.successText")}</StyledHint>
+          </React.Fragment>
+        ) : (
+          <React.Fragment>
+            {formFields && !!formFields.length && (
+              <StyledForm
+                action="#"
+                method="POST"
+                onSubmit={handleSubmit}
+                autoComplete="off"
+              >
+                <StyledTitle>{t("reservation.form.title")}</StyledTitle>
+                <StyledHint>{t("reservation.form.text")}</StyledHint>
 
-          {formFields && !!formFields.length && (
-            <StyledLayout>
-              {formFields.map(
-                ({ id, label, name, type }: TFormField): React.ReactElement => {
-                  if (type === "tel") {
-                    return (
-                      <Phone
-                        {...{ id, name }}
-                        error={errors[id] && touched[id] ? errors[id] : null}
-                        key={`${id}-reservation-form-item`}
-                        onBlur={handleBlur}
-                        onChange={handlePhoneChange}
-                      />
-                    );
-                  }
+                {formFields && !!formFields.length && (
+                  <StyledLayout>
+                    {formFields.map(
+                      ({
+                        id,
+                        label,
+                        name,
+                        type,
+                      }: TFormField): React.ReactElement => {
+                        if (type === "tel") {
+                          return (
+                            <Phone
+                              {...{ id, name }}
+                              error={
+                                errors[id] && touched[id] ? errors[id] : null
+                              }
+                              key={`${id}-reservation-form-item`}
+                              onBlur={handleBlur}
+                              onChange={handlePhoneChange}
+                            />
+                          );
+                        }
 
-                  return (
-                    <Input
-                      {...{ id, name, type }}
-                      error={errors[id] && touched[id] ? errors[id] : null}
-                      iconID={name as TIconProps["id"]}
-                      key={`${id}-reservation-form-item`}
-                      onBlur={handleBlur}
-                      onChange={handleChange}
-                      placeholder={t(`reservation.form.fields.${label}`)}
-                    />
-                  );
-                }
-              )}
-            </StyledLayout>
-          )}
+                        return (
+                          <Input
+                            {...{ id, name, type }}
+                            error={
+                              errors[id] && touched[id] ? errors[id] : null
+                            }
+                            iconID={name as TIconProps["id"]}
+                            key={`${id}-reservation-form-item`}
+                            onBlur={handleBlur}
+                            onChange={handleChange}
+                            placeholder={t(`reservation.form.fields.${label}`)}
+                          />
+                        );
+                      }
+                    )}
+                  </StyledLayout>
+                )}
 
-          <Button type="submit">{t("reservation.form.submit")}</Button>
-        </form>
-      )}
+                <Button type="submit">{t("reservation.form.submit")}</Button>
+              </StyledForm>
+            )}
+
+            {isSubmitting && <Spinner />}
+          </React.Fragment>
+        )}
+      </Container>
     </StyledWrapper>
   );
 };

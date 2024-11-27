@@ -11,13 +11,17 @@ import {
 
 const Input: React.FC<TProps> = ({ error, iconID, type, ...rest }) => {
   const [currentType, setCurrentType] = useState<typeof type>(
-    type === "date" ? "text" : type
+    type === "date" ? "text" : type === "time" ? "text" : type
   );
   const hasError = Boolean(error);
 
   const handleInputFocus = (): void => {
     if (type === "date") {
       setCurrentType("date");
+    }
+
+    if (type === "time") {
+      setCurrentType("time");
     }
   };
 

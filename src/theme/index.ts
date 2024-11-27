@@ -1,10 +1,11 @@
 "use client";
 import type { DefaultTheme } from "styled-components";
 
-import { colors, fonts } from "./variables";
+import { colors, devices, fonts } from "./variables";
 
 const theme: DefaultTheme = {
   colors,
+  devices,
 
   font: (size, weight, family) => ({
     fontFamily: family,

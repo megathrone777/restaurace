@@ -1,7 +1,7 @@
 import "styled-components";
 import type { CSSObject } from "styled-components";
 
-import type { TColors, TFonts } from "~/theme/variables";
+import type { TColors, TDevices, TFonts } from "~/theme/variables";
 
 declare module "styled-components" {
   interface TPlaceholderFunction<P = Styles<object>> {
@@ -22,6 +22,7 @@ declare module "styled-components" {
 
   export interface DefaultTheme {
     colors: TColors;
+    devices: TDevices;
     font: TFontFunction;
     hover: THoverFunction;
     placeholder: TPlaceholderFunction;
