@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { Icon } from "~/theme/components";
 import type { TProps } from "./Input.types";
@@ -10,20 +10,7 @@ import {
 } from "./Input.styled";
 
 const Input: React.FC<TProps> = ({ error, iconID, type, ...rest }) => {
-  const [currentType, setCurrentType] = useState<typeof type>(
-    type === "date" ? "text" : type === "time" ? "text" : type
-  );
   const hasError = Boolean(error);
-
-  const handleInputFocus = (): void => {
-    if (type === "date") {
-      setCurrentType("date");
-    }
-
-    if (type === "time") {
-      setCurrentType("time");
-    }
-  };
 
   return (
     <StyledWrapper>
@@ -33,12 +20,7 @@ const Input: React.FC<TProps> = ({ error, iconID, type, ...rest }) => {
         </StyledIcon>
       )}
 
-      <StyledInput
-        className={hasError ? "error" : ""}
-        onFocus={handleInputFocus}
-        type={currentType}
-        {...rest}
-      />
+      <StyledInput className={hasError ? "error" : ""} type={type} {...rest} />
       {hasError && <StyledError>{error}</StyledError>}
     </StyledWrapper>
   );
