@@ -1,9 +1,22 @@
 {
+  "about": {
+    "text": "„TRADITIONELLES TSCHECHISCHES RESTAURANT“ IM ZENTRUM VON PRAG, EINE KÜRZE VON",
+    "text2": "RESTAURANT MIT KLASSISCHER TSCHECHISCHER KÜCHE AUCH HAMBURGER, PASTA, SALATE UND MINUTENKÜCHE",
+    "text3": "MÖGLICHKEIT DER ORGANISATION VON HOCHZEITEN, FIRMENVERANSTALTUNGEN, GEBURTSTAGSFEIEREN ODER PARTEIEN, NACH ENTWURF: PILSNER URQUELL VELKOPPOVICKÝ KOZEL 11° BLACK GOAT, RADEGAST MISCHGETRÄNKE, WEINE UND VERSCHIEDENE ARTEN VON SOFTGETRÄNKEN",
+    "text4": "WEITERE DIENSTLEISTUNGEN: WIFI, KARTENZAHLUNG, LEBENSMITTELLIEFERUNG ÜBER <a href='https://food.bolt.eu/cs-CZ/271-prague/p/2258-u-dlaba%C4%8D%C5%AF' target='_blank'>BOLT</a>, <a href='https://wolt.com/cs/cze/prague/restaurant/restaurace-u-dlabacu' target='_blank'>WOLT</a>, <a href='https://www.foodora.cz/restaurant/z6ji/restaurace-u-dlabacu' target='_blank'>FOODORA</a>, WIR FREUEN SICH AUF IHREN BESUCH!",
+    "title": "Über das Restaurant"
+  },
+  "hero": {
+    "text": "Traditionelles tschechisches Restaurant im Zentrum von Prag",
+    "title": "Restaurant U Dlabačů"
+  },
   "footer": {
     "about": "über uns",
     "contacts": "Kontaktieren Sie",
     "menu": "Quicklinks",
-    "time": "Öffnungszeiten"
+    "text": "Restaurant mit klassischer tschechischer Küche",
+    "time": "Öffnungszeiten",
+    "title": "Traditionelles tschechisches Restaurant im Zentrum von Prag, nicht weit entfernt"
   },
   "menu": {
     "menu": "Speisekarte",
@@ -35,6 +48,9 @@
       "title": "Bitte füllen Sie das untenstehende Formular aus, um eine Reservierung vorzunehmen"
     },
     "title": "Reservierung"
+  },
+  "reviews": {
+    "title": "Rezension"
   },
   "schedule": "Montag - Sonntag: 16:00 - 2:00",
   "support": "Wir unterstützen die Ukraine."

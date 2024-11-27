@@ -1,9 +1,11 @@
 import { styled } from "~/theme";
 
-export const StyledWrapper = styled.div(
+export const StyledWrapper = styled.div({});
+
+export const StyledLayout = styled.div(
   ({ theme: { colors, devices, font, hover } }) => ({
     color: "white",
-    maxWidth: 320,
+    marginBottom: 20,
 
     ...font(17, "normal"),
 

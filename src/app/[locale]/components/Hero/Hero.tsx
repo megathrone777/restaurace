@@ -4,8 +4,8 @@ import { useTranslations } from "next-intl";
 import { SwiperProps } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 
+import { Socials } from "~/components";
 import { Button } from "~/theme/components";
-import type { TSliderItem } from "./Hero.types";
 import { items } from "./Hero.data";
 import {
   StyledWrapper,
@@ -51,24 +51,25 @@ const Hero: React.FC = () => {
           onSlideChangeTransitionStart={handleSlideChangeTransitionStart}
         >
           {items.map(
-            (
-              { image, text, title }: TSliderItem,
-              index: number
-            ): React.ReactElement => (
+            (item: string, index: number): React.ReactElement => (
               <StyledSlide key={`hero-slide-${index}`}>
-                <StyledImage alt="U Dlabacu." src={`/images/slider/${image}`} />
+                <StyledImage alt="U Dlabacu." src={`/images/slider/${item}`} />
 
                 <StyledContent>
                   <StyledTitle key={`${key}-title-${index}`}>
-                    {title}
+                    {t("hero.title")}
                   </StyledTitle>
 
-                  <StyledText key={`${key}-text-${index}`}>{text}</StyledText>
+                  <StyledText key={`${key}-text-${index}`}>
+                    {t("hero.text")}
+                  </StyledText>
 
                   <StyledButtons key={`${key}-buttons-${index}`}>
                     <Button href="/reservation">
                       {t("reservation.title")}
                     </Button>
+
+                    <Socials />
                   </StyledButtons>
                 </StyledContent>
               </StyledSlide>

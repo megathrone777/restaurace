@@ -2,6 +2,9 @@ import React from "react";
 import Script from "next/script";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import "yet-another-react-lightbox/styles.css";
+import "yet-another-react-lightbox/plugins/captions.css";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
 
 import { Footer, Header, ThemeRegistry } from "~/components";
 import { GlobalStyle } from "~/theme";

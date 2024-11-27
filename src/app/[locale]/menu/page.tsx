@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslations } from "next-intl";
 
 import { Hero } from "~/components";
+import { Gallery } from "./components";
 
 const Page: React.FC = () => {
   const t = useTranslations();
@@ -9,7 +10,7 @@ const Page: React.FC = () => {
   return (
     <React.Fragment>
       <Hero imageURL="/images/hero/menu_img.jpg" title={t("menu.menu")} />
-      <div>Menu page</div>
+      <Gallery />
     </React.Fragment>
   );
 };

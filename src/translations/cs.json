@@ -1,9 +1,22 @@
 {
+  "about": {
+    "text": "\"TRADIČNÍ ČESKÁ RESTAURACE\" V CENTRU PRAHY, KOUSEK OD",
+    "text2": "RESTAURACE S KLASICKOU ČESKOU KUCHYNÍ TAKY HAMBURGERY, TĚSTOVINY, SALÁTY A MINUTKOVÉ POKRMY",
+    "text3": "MOŽNOST POŘÁDÁNÍ SVATEB FIREMNÍCH AKCÍ, NAROZENINOVÝCH OSLAV NEBO RAUTŮ, NA ČEPU: PILSNER URQUELL VELKOPPOPOVICKÝ KOZEL 11° ČERNÝ KOZEL, RADEGAST MÍCHANÉ DRINKY, VÍNA A RŮZNÉ DRUHY NEALKO NAPOJI",
+    "text4": "DALŠÍ SLUŽBY: WIFI, PLATBA KARTOU, ROZVOZ JÍDEL PŘES <a href='https://food.bolt.eu/cs-CZ/271-prague/p/2258-u-dlaba%C4%8D%C5%AF' target='_blank'>BOLT</a>, <a href='https://wolt.com/cs/cze/prague/restaurant/restaurace-u-dlabacu' target='_blank'>WOLT</a>, <a href='https://www.foodora.cz/restaurant/z6ji/restaurace-u-dlabacu' target='_blank'>FOODORA</a>, TĚŠÍME SE NA VAŠI NÁVŠTĚVU!",
+    "title": "O restauraci"
+  },
+  "hero": {
+    "text": "TRADIČNÍ ČESKÁ RESTAURACE V CENTRU PRAHY",
+    "title": "Restaurace U Dlabačů"
+  },
   "footer": {
     "about": "o nás",
     "contacts": "kontaktujte",
     "menu": "rychlé odkazy",
-    "time": "otevírací doba"
+    "text": "Restaurace s klasickou českou kuchyní",
+    "time": "otevírací doba",
+    "title": "Tradiční česká restaurace v centru prahy, kousek od"
   },
   "menu": {
     "menu": "Menu",
@@ -35,6 +48,9 @@
       "text": "Moznost reservace restaurace od 12:00 po dohode s maitelem",
       "title": "Pro rezervaci prosím vyplňte níže uvedený formulář"
     }
+  },
+  "reviews": {
+    "title": "Recenze"
   },
   "schedule": "Pondělí - Neděle: 16:00 - 2:00",
   "support": "Podporujeme Ukrajinu."

@@ -1,9 +1,22 @@
 {
+  "about": {
+    "text": "\"TRADITIONAL CZECH RESTAURANT\" IN THE CENTER OF PRAGUE, CLOSE FROM",
+    "text2": "RESTAURANT WITH CLASSIC CZECH CUISINE ALSO HAMBURGERS, PASTA, SALADS AND MINUTE DISHES",
+    "text3": "POSSIBILITY OF ORGANIZING WEDDINGS, CORPORATE EVENTS, BIRTHDAY PARTIES OR PARTIES, ON DRAFT: PILSNER URQUELL VELKOPPOVICKÝ KOZEL 11° BLACK GOAT, RADEGAST MIXED DRINKS, WINES AND VARIOUS TYPES OF SOFT DRINKS",
+    "text4": "OTHER SERVICES: WIFI, CARD PAYMENT, FOOD DELIVERY THROUGH <a href='https://food.bolt.eu/cs-CZ/271-prague/p/2258-u-dlaba%C4%8D%C5%AF' target='_blank'>BOLT</a>, <a href='https://wolt.com/cs/cze/prague/restaurant/restaurace-u-dlabacu' target='_blank'>WOLT</a>, <a href='https://www.foodora.cz/restaurant/z6ji/restaurace-u-dlabacu' target='_blank'>FOODORA</a>, WE LOOK FORWARD TO YOUR VISIT!",
+    "title": "About restaurant"
+  },
+  "hero": {
+    "text": "Traditional Czech restaurant in the center of Prague",
+    "title": "Restaurant U Dlabačů"
+  },
   "footer": {
     "about": "about us",
     "contacts": "contact us",
     "menu": "quick links",
-    "time": "opening hours"
+    "text": "Restaurant with classic Czech cuisine",
+    "time": "opening hours",
+    "title": "Traditional Czech restaurant in the center of Prague, not far from"
   },
   "menu": {
     "menu": "Menu",
@@ -35,6 +48,9 @@
       "title": "Please fill out the form below to make a reservation"
     },
     "title": "Reservation"
+  },
+  "reviews": {
+    "title": "Reviews"
   },
   "schedule": "Monday - Sunday: 16:00 - 2:00",
   "support": "We support Ukraine."

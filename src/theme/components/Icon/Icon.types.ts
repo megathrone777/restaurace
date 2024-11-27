@@ -10,5 +10,7 @@ export interface TProps {
     | "tripadvisor"
     | "name"
     | "time"
-    | "date";
+    | "date"
+    | "facebook"
+    | "instagram";
 }

@@ -17,7 +17,7 @@ const fadeInDown = keyframes({
 const fadeInUp = keyframes({
   "0%": {
     opacity: 0,
-    transform: "translate3d(0px, 100%, 0px)",
+    transform: "translate3d(0px, 50%, 0px)",
   },
 
   "100%": {
@@ -99,6 +99,7 @@ export const StyledTitle = styled.h2(
     marginBottom: 10,
     textTransform: "uppercase",
     ...font(70, "semiBold"),
+    whiteSpace: "nowrap",
 
     [devices.desktop]: {
       fontSize: 55,
@@ -139,7 +140,11 @@ export const StyledText = styled.p(
 export const StyledButtons = styled.div(
   {
     ...fadeInDefaults,
+    alignItems: "flex-start",
     animationDelay: "0.8s",
+    display: "flex",
+    flexDirection: "column",
+    rowGap: 30,
   },
   () => css`
     animation-name: ${fadeInUp};

@@ -3,6 +3,7 @@ import React from "react";
 import Rating from "react-star-ratings";
 import { type SwiperProps } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import { useTranslations } from "next-intl";
 
 import { useTheme } from "~/theme";
 import { Container, Icon } from "~/theme/components";
@@ -50,11 +51,12 @@ const sliderOptions: SwiperProps = {
 
 const Reviews: React.FC = () => {
   const { colors } = useTheme();
+  const t = useTranslations();
 
   return (
     <StyledWrapper>
       <Container>
-        <StyledTitle>Recenze</StyledTitle>
+        <StyledTitle>{t("reviews.title")}</StyledTitle>
 
         {items && !!items.length && (
           <StyledSlider {...sliderOptions}>
