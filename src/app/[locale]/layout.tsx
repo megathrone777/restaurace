@@ -1,6 +1,7 @@
 import React from "react";
 import Script from "next/script";
-import { NextIntlClientProvider, useMessages } from "next-intl";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
 
 import { Footer, Header, ThemeRegistry } from "~/components";
 import { GlobalStyle } from "~/theme";
@@ -9,8 +10,8 @@ import type { TProps } from "./types";
 
 const GTM_ID = "GTM-PTDGKLZG";
 
-const Layout: React.FC<TProps> = ({ children, params: { locale } }) => {
-  const messages = useMessages();
+const Layout: React.FC<TProps> = async ({ children, params: { locale } }) => {
+  const messages = await getMessages();
 
   return (
     <html className={font.variable} lang={locale}>
@@ -18,7 +19,7 @@ const Layout: React.FC<TProps> = ({ children, params: { locale } }) => {
         <ThemeRegistry>
           <GlobalStyle />
 
-          <NextIntlClientProvider {...{ locale, messages }}>
+          <NextIntlClientProvider {...{ messages }}>
             <Header />
             {children}
             <Footer />

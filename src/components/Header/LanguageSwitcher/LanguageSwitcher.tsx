@@ -13,7 +13,7 @@ const LanguageSwitcher: React.FC = () => {
   }: React.SyntheticEvent<HTMLButtonElement>): void => {
     const selectedLocale = currentTarget.value;
 
-    router.replace(pathname, { locale: selectedLocale as TLocale });
+    router.replace({ pathname }, { locale: selectedLocale as TLocale });
   };
 
   return (
