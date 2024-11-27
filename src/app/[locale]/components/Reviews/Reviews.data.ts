@@ -89,7 +89,7 @@ const items: TSliderItem[] = [
     author: "Tomislav Anđelić",
     date: "a year ago",
     rating: 5,
-    text: `Best food we had in Prague!!! Goulash and ribs were amazing 🤩 Definitely come here. Also the owner is great and very friendly`,
+    text: "Best food we had in Prague!!! Goulash and ribs were amazing 🤩 Definitely come here. Also the owner is great and very friendly",
     type: "google",
   },
 
@@ -128,7 +128,7 @@ const items: TSliderItem[] = [
     author: "Sylvie B",
     date: "May 2024",
     rating: 5,
-    text: `Very good, fast, pleasant waitress, the dishes are copious and well seasoned, we recommend this little underground restaurant! The value for money is very good`,
+    text: "Very good, fast, pleasant waitress, the dishes are copious and well seasoned, we recommend this little underground restaurant! The value for money is very good",
     type: "tripadvisor",
   },
 
@@ -136,7 +136,7 @@ const items: TSliderItem[] = [
     author: "Txemi Gonzalez",
     date: "a year ago",
     rating: 5,
-    text: `Good dinner with friends. Beef tartar and ribs delicious. Also duck. Very gentle service.`,
+    text: "Good dinner with friends. Beef tartar and ribs delicious. Also duck. Very gentle service.",
     type: "google",
   },
   {
@@ -151,7 +151,7 @@ const items: TSliderItem[] = [
     author: "Irene L",
     date: "Apr 2024",
     rating: 5,
-    text: `Intimate and very nice place, really good food without spending a lot and very, very kind and friendly staff... and in this city that is not at all a given`,
+    text: "Intimate and very nice place, really good food without spending a lot and very, very kind and friendly staff... and in this city that is not at all a given",
     type: "tripadvisor",
   },
   {

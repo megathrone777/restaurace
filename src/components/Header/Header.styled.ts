@@ -28,7 +28,7 @@ export const StyledLayout = styled.div({
   height: "100%",
 });
 
-export const StyledContent = styled.div(({ theme: { colors, devices } }) => ({
+export const StyledContent = styled.div(({ theme: { devices } }) => ({
   alignItems: "center",
   columnGap: 70,
   display: "flex",
