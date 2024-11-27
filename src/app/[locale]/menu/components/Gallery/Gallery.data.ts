@@ -31,11 +31,11 @@ const items: SlideImage[] = [
     src: "/images/menu/menu_img6.avif",
     title: "Vepřový steak s fazolemi a slaninou",
   },
-  {
-    alt: "Vepřový steak se slaninou a hermelínem",
-    src: "/images/menu/menu_img7.avif",
-    title: "Vepřový steak se slaninou a hermelínem",
-  },
+  // {
+  //   alt: "Vepřový steak se slaninou a hermelínem",
+  //   src: "/images/menu/menu_img7.avif",
+  //   title: "Vepřový steak se slaninou a hermelínem",
+  // },
   {
     alt: "Gnocchi s kuřecím masem a houbami",
     src: "/images/menu/menu_img8.avif",
@@ -67,19 +67,19 @@ const items: SlideImage[] = [
     title: "Marinovaná žebra",
   },
   {
-    alt: "Hamburger + hranolky",
+    alt: "Hamburger",
     src: "/images/menu/menu_img14.avif",
-    title: "Hamburger + hranolky",
+    title: "Hamburger",
   },
   {
-    alt: "Cheese Burger + hranolky",
+    alt: "Cheese Burger",
     src: "/images/menu/menu_img15.avif",
-    title: "Cheese Burger + hranolky",
+    title: "Cheese Burger",
   },
   {
-    alt: "Max Burger + hranolky",
+    alt: "Max Burger",
     src: "/images/menu/menu_img16.avif",
-    title: "Max Burger + hranolky",
+    title: "Max Burger",
   },
   {
     alt: "Smažený vepřový řízek",
