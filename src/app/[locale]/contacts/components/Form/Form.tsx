@@ -2,11 +2,16 @@
 import React, { useState } from "react";
 import { useTranslations } from "next-intl";
 import { useFormik } from "formik";
-import { number, object, string } from "yup";
+import { object, string } from "yup";
 
-import { Button, Container, Input, Spinner } from "~/theme/components";
+import {
+  Button,
+  Container,
+  Input,
+  Spinner,
+  Textarea,
+} from "~/theme/components";
 import type { TProps as TIconProps } from "~/theme/components/Icon/Icon.types";
-import { Phone } from "./Phone";
 import { formFields } from "./Form.data";
 import type { TFormField } from "./Form.types";
 import {
@@ -14,25 +19,17 @@ import {
   StyledForm,
   StyledLayout,
   StyledTitle,
-  StyledHint,
 } from "./Form.styled";
-
-const phonePattern =
-  /\(?\+[0-9]{1,3}\)? ?-?[0-9]{1,3} ?-?[0-9]{3,5} ?-?[0-9]{4}( ?-?[0-9]{3})?/;
 
 const Form: React.FC = () => {
   const t = useTranslations();
   const [success, toggleSuccess] = useState<boolean>(false);
   const validationSchema = object().shape({
-    date: string().required(t("reservation.form.errors.date")),
-    guests: number()
-      .min(1, t("reservation.form.errors.guests"))
-      .required(t("reservation.form.errors.guests")),
-    name: string().required(t("reservation.form.errors.name")),
-    phone: string()
-      .matches(phonePattern, t("reservation.form.errors.phone"))
-      .required(t("reservation.form.errors.phone")),
-    time: string().required(t("reservation.form.errors.time")),
+    email: string()
+      .email(t("contacts.form.errors.email"))
+      .required(t("contacts.form.errors.email")),
+    name: string().required(t("contacts.form.errors.name")),
+    message: string().required(t("contacts.form.errors.message")),
   });
   const {
     errors,
@@ -40,19 +37,16 @@ const Form: React.FC = () => {
     handleChange,
     handleSubmit,
     isSubmitting,
-    setFieldValue,
     touched,
   } = useFormik({
     initialValues: {
-      date: "",
-      guests: "",
+      email: "",
       name: "",
-      phone: "",
-      time: "",
+      message: "",
     },
 
     onSubmit: async (values) => {
-      const response = await fetch("/api/reservation", {
+      const response = await fetch("/api/contacts", {
         body: JSON.stringify(values),
         method: "POST",
       });
@@ -71,17 +65,12 @@ const Form: React.FC = () => {
     validateOnBlur: true,
   });
 
-  const handlePhoneChange = (value: string): void => {
-    setFieldValue("phone", value);
-  };
-
   return (
     <StyledWrapper>
       <Container>
         {success ? (
           <React.Fragment>
-            <StyledTitle>{t("reservation.form.success")}</StyledTitle>
-            <StyledHint>{t("reservation.form.successText")}</StyledHint>
+            <StyledTitle>{t("contacts.form.success")}</StyledTitle>
           </React.Fragment>
         ) : (
           <React.Fragment>
@@ -92,8 +81,7 @@ const Form: React.FC = () => {
                 onSubmit={handleSubmit}
                 autoComplete="off"
               >
-                <StyledTitle>{t("reservation.form.title")}</StyledTitle>
-                <StyledHint>{t("reservation.form.text")}</StyledHint>
+                <StyledTitle>{t("contacts.form.title")}</StyledTitle>
 
                 {formFields && !!formFields.length && (
                   <StyledLayout>
@@ -104,16 +92,17 @@ const Form: React.FC = () => {
                         name,
                         type,
                       }: TFormField): React.ReactElement => {
-                        if (type === "tel") {
+                        if (type === "textarea") {
                           return (
-                            <Phone
-                              {...{ id, name }}
+                            <Textarea
+                              {...{ id, name, type }}
                               error={
                                 errors[id] && touched[id] ? errors[id] : null
                               }
-                              key={`${id}-reservation-form-item`}
+                              key={`${id}-contacts-form-item`}
                               onBlur={handleBlur}
-                              onChange={handlePhoneChange}
+                              onChange={handleChange}
+                              placeholder={t(`contacts.form.fields.${label}`)}
                             />
                           );
                         }
@@ -125,10 +114,10 @@ const Form: React.FC = () => {
                               errors[id] && touched[id] ? errors[id] : null
                             }
                             iconID={name as TIconProps["id"]}
-                            key={`${id}-reservation-form-item`}
+                            key={`${id}-contacts-form-item`}
                             onBlur={handleBlur}
                             onChange={handleChange}
-                            placeholder={t(`reservation.form.fields.${label}`)}
+                            placeholder={t(`contacts.form.fields.${label}`)}
                           />
                         );
                       }
@@ -136,7 +125,7 @@ const Form: React.FC = () => {
                   </StyledLayout>
                 )}
 
-                <Button type="submit">{t("reservation.form.submit")}</Button>
+                <Button type="submit">{t("contacts.form.submit")}</Button>
               </StyledForm>
             )}
 

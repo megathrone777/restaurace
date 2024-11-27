@@ -6,6 +6,23 @@
     "text4": "OTHER SERVICES: WIFI, CARD PAYMENT, FOOD DELIVERY THROUGH <a href='https://food.bolt.eu/cs-CZ/271-prague/p/2258-u-dlaba%C4%8D%C5%AF' target='_blank'>BOLT</a>, <a href='https://wolt.com/cs/cze/prague/restaurant/restaurace-u-dlabacu' target='_blank'>WOLT</a>, <a href='https://www.foodora.cz/restaurant/z6ji/restaurace-u-dlabacu' target='_blank'>FOODORA</a>, WE LOOK FORWARD TO YOUR VISIT!",
     "title": "About restaurant"
   },
+  "contacts": {
+    "form": {
+      "fields": {
+        "name": "Name",
+        "email": "E-mail",
+        "message": "Message"
+      },
+      "errors": {
+        "name": "Name is required field",
+        "email": "E-mail is not valid",
+        "message": "Message is required field"
+      },
+      "title": "Please fill out the form below and we'll contact you soon",
+      "success": "Thank you for your message, we'll contact you soon",
+      "submit": "Send"
+    }
+  },
   "hero": {
     "text": "Traditional Czech restaurant in the center of Prague",
     "title": "Restaurant U Dlabačů"

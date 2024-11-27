@@ -6,6 +6,23 @@
     "text4": "DALŠÍ SLUŽBY: WIFI, PLATBA KARTOU, ROZVOZ JÍDEL PŘES <a href='https://food.bolt.eu/cs-CZ/271-prague/p/2258-u-dlaba%C4%8D%C5%AF' target='_blank'>BOLT</a>, <a href='https://wolt.com/cs/cze/prague/restaurant/restaurace-u-dlabacu' target='_blank'>WOLT</a>, <a href='https://www.foodora.cz/restaurant/z6ji/restaurace-u-dlabacu' target='_blank'>FOODORA</a>, TĚŠÍME SE NA VAŠI NÁVŠTĚVU!",
     "title": "O restauraci"
   },
+  "contacts": {
+    "form": {
+      "fields": {
+        "name": "Jméno",
+        "email": "E-mail",
+        "message": "Zpráva"
+      },
+      "errors": {
+        "name": "Jméno je povinné pole",
+        "email": "E-mail není platný",
+        "message": "Zpráva je povinné pole"
+      },
+      "title": "Vyplňte prosím níže uvedený formulář a my se vám brzy ozveme",
+      "success": "Děkujeme za vaši zprávu, brzy se vám ozveme",
+      "submit": "Odeslat"
+    }
+  },
   "hero": {
     "text": "TRADIČNÍ ČESKÁ RESTAURACE V CENTRU PRAHY",
     "title": "Restaurace U Dlabačů"
@@ -31,7 +48,7 @@
       "fields": {
         "date": "Datum",
         "guests": "Počet obsob: (min. 1)",
-        "name": "Jmeno",
+        "name": "Jméno",
         "phone": "Telefonní číslo",
         "time": "Čas"
       },

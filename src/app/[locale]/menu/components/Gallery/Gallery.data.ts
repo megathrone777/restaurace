@@ -126,6 +126,11 @@ const items: SlideImage[] = [
     src: "/images/menu/menu_img25.avif",
     title: "BBQ omáčka",
   },
+  {
+    alt: "Grilovaná klobása",
+    src: "/images/menu/menu_img26.jpg",
+    title: "Grilovaná klobása",
+  },
 ];
 
 export { items };
