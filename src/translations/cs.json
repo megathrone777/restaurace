@@ -46,6 +46,7 @@
     "title": "Rezervace",
     "form": {
       "fields": {
+        "email": "E-mail",
         "date": "Datum",
         "guests": "Počet obsob: (min. 1)",
         "name": "Jméno",
@@ -54,6 +55,7 @@
       },
       "errors": {
         "date": "Datum je povinné pole",
+        "email": "E-mail není platný",
         "guests": "Minimálně 1 host",
         "name": "Jméno je povinné pole",
         "phone": "Telefonní číslo není platné",

@@ -45,6 +45,7 @@
   "reservation": {
     "form": {
       "fields": {
+        "email": "E-mail",
         "date": "Date",
         "guests": "Guests (min. 1)",
         "name": "Name",
@@ -53,6 +54,7 @@
       },
       "errors": {
         "date": "Date is required field",
+        "email": "E-mail is not valid",
         "guests": "Minimum 1 guest",
         "name": "Name is required field",
         "phone": "Phone number is not valid",

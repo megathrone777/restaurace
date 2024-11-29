@@ -9,6 +9,10 @@ export const POST = async (request: NextRequest): Promise<Response> => {
         return `Jmeno: ${data[item]}`;
       }
 
+      if (item === "email") {
+        return `E-mail: ${data[item]}`;
+      }
+
       if (item === "phone") {
         return `Telefonní číslo: ${data[item]}`;
       }

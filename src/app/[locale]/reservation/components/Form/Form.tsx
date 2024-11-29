@@ -25,6 +25,9 @@ const Form: React.FC = () => {
   const [success, toggleSuccess] = useState<boolean>(false);
   const validationSchema = object().shape({
     date: string().required(t("reservation.form.errors.date")),
+    email: string()
+      .email(t("reservation.form.errors.email"))
+      .required(t("reservation.form.errors.email")),
     guests: number()
       .min(1, t("reservation.form.errors.guests"))
       .required(t("reservation.form.errors.guests")),
@@ -45,6 +48,7 @@ const Form: React.FC = () => {
   } = useFormik({
     initialValues: {
       date: "",
+      email: "",
       guests: "",
       name: "",
       phone: "",

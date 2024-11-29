@@ -14,6 +14,12 @@ export const formFields: TFormField[] = [
     type: "tel",
   },
   {
+    id: "email",
+    label: "email",
+    name: "email",
+    type: "email",
+  },
+  {
     id: "date",
     label: "date",
     name: "date",

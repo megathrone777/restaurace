@@ -46,6 +46,7 @@
     "form": {
       "fields": {
         "date": "Datum",
+        "email": "E-mail",
         "guests": "Gäste (min. 1)",
         "name": "Name",
         "phone": "Telefonnummer",
@@ -53,6 +54,7 @@
       },
       "errors": {
         "date": "Das Datum ist ein Pflichtfeld",
+        "email": "E-Mail ist ungültig",
         "guests": "Mindestens 1 Gast",
         "name": "Name ist ein Pflichtfeld",
         "phone": "Die Telefonnummer ist ungültig",
