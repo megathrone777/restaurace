@@ -43,7 +43,7 @@ export const StyledItem = styled.li(({ theme: { devices } }) => ({
 }));
 
 export const StyledImageHolder = styled.div({
-  height: 200,
+  height: 400,
   marginBottom: 5,
   position: "relative",
 
