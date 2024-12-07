@@ -87,9 +87,9 @@ const items: SlideImage[] = [
     title: "Smažený plněný hermelín anglickou slaninou a nivou",
   },
   {
-    alt: "Smažený plněný hermelín anglickou slaninou a nivou",
+    alt: "Halušky s úzeným masem klobásou a zelím",
     src: "/images/menu/menu_img18.jpg",
-    title: "Smažený plněný hermelín anglickou slaninou a nivou",
+    title: "Halušky s úzeným masem klobásou a zelím",
   },
 ];
 
