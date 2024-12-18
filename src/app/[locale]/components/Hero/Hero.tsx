@@ -14,6 +14,7 @@ import {
   StyledButtons,
   StyledImage,
   StyledContent,
+  StyledHoliday,
   StyledTitle,
   StyledText,
   StyledFlagWrapper,
@@ -72,6 +73,12 @@ const Hero: React.FC = () => {
                     <Socials />
                   </StyledButtons>
                 </StyledContent>
+
+                <StyledHoliday>
+                  <h3>Přijmame objednávky na rezervace:</h3>
+                  <p>Štědrý den 24.12.2024: otevřeno od 18.00 -24.00</p>
+                  <p>Silvestr 31.12.2024: otevřeno od 18.00 - 5.00 - ?</p>
+                </StyledHoliday>
               </StyledSlide>
             )
           )}

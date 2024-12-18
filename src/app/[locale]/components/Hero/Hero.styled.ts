@@ -37,6 +37,7 @@ export const StyledWrapper = styled.div(({ theme: { colors, devices } }) => ({
   marginTop: -80,
   maxHeight: 1100,
   overflow: "hidden",
+  position: "relative",
 
   [devices.desktop]: {
     height: "80vh",
@@ -44,6 +45,20 @@ export const StyledWrapper = styled.div(({ theme: { colors, devices } }) => ({
 
   [devices.tablet]: {
     height: 400,
+  },
+
+  "&::before": {
+    background: "url(/images/new_year_bg.png) center top/100% auto no-repeat",
+    content: "''",
+    display: "none",
+    position: "absolute",
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    height: "100%",
+    width: "100%",
+    zIndex: 2000,
   },
 }));
 
@@ -55,7 +70,7 @@ export const StyledSlide = styled(SwiperSlide)({
   height: "100%",
 
   "&::before": {
-    backgroundColor: "rgba(0, 0, 0, .5)",
+    backgroundColor: "rgba(0, 0, 0, .6)",
     bottom: 0,
     content: "''",
     display: "block",
@@ -136,6 +151,32 @@ export const StyledText = styled.p(
     animation-name: ${fadeInDown};
   `
 );
+
+export const StyledHoliday = styled.div(({ theme: { colors, devices } }) => ({
+  color: "white",
+  // fontStyle: "italic",
+  fontWeight: "bold",
+  fontSize: 27,
+  position: "absolute",
+  top: 100,
+  right: 50,
+
+  [devices.desktop]: {
+    display: "none",
+  },
+
+  "& > *": {
+    marginBottom: 10,
+  },
+
+  "& > p": {
+    fontSize: 25,
+  },
+
+  "& > h3": {
+    color: colors.beige,
+  },
+}));
 
 export const StyledButtons = styled.div(
   {

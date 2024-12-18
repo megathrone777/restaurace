@@ -48,7 +48,7 @@ export const StyledImageHolder = styled.div({
   position: "relative",
 
   "&::before": {
-    backgroundColor: "rgba(0, 0, 0, .3)",
+    // backgroundColor: "rgba(0, 0, 0, .3)",
     bottom: 0,
     content: "''",
     display: "block",

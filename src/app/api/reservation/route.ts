@@ -1,7 +1,24 @@
 import { NextRequest, NextResponse } from "next/server";
 
+const chatId = -4507786399;
+
 export const POST = async (request: NextRequest): Promise<Response> => {
   try {
+    // const responseAll = await fetch(
+    //   "https://api.telegram.org/bot8015378230:AAHUe4n6Gp4t75cImtOg_D_yU_AOU9BeKQU/getHistory",
+    //   {
+    //     body: JSON.stringify({
+    //       chat_id: chatId,
+    //     }),
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     method: "POST",
+    //   }
+    // );
+
+    // console.log(await responseAll.json());
+
     const data = await request.json();
     const keys = Object.keys(data);
     const message = keys.map((item: string) => {
@@ -38,7 +55,7 @@ export const POST = async (request: NextRequest): Promise<Response> => {
       "https://api.telegram.org/bot8015378230:AAHUe4n6Gp4t75cImtOg_D_yU_AOU9BeKQU/sendMessage",
       {
         body: JSON.stringify({
-          chat_id: -4507786399,
+          chat_id: chatId,
           text: `RESERVACE №${Date.now()} \n\n ${message.join(
             "\n\n"
           )} \n===============================`,

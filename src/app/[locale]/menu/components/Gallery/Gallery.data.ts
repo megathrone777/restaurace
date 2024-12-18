@@ -2,9 +2,9 @@ import type { SlideImage } from "yet-another-react-lightbox";
 
 const items: SlideImage[] = [
   {
-    alt: "1/2 Pečená kachnička ,zelí a variace knedlíků",
+    alt: "1/2 Pečená kachnička, zelí a variace knedlíků",
     src: "/images/menu/menu_img16.jpg",
-    title: "1/2 Pečená kachnička ,zelí a variace knedlíků",
+    title: "1/2 Pečená kachnička, zelí a variace knedlíků",
   },
   {
     alt: "Mix banketních řizečků",
@@ -22,14 +22,14 @@ const items: SlideImage[] = [
     title: "Vepřová panenka, pepřová omáčka, USA brambory",
   },
   {
-    alt: "Smažený sýr, hranolky,domácí tatranská omáčka",
+    alt: "Smažený sýr, hranolky, domácí tatarská omáčka",
     src: "/images/menu/menu_img4.jpg",
-    title: "Smažený sýr, hranolky,domácí tatranská omáčka",
+    title: "Smažený sýr, hranolky, domácí tatarská omáčka",
   },
   {
-    alt: "Vepřový řízek,hranolky",
+    alt: "Vepřový řízek, hranolky",
     src: "/images/menu/menu_img5.jpg",
-    title: "Vepřový řízek,hranolky",
+    title: "Vepřový řízek, hranolky",
   },
   {
     alt: "Obložená mísa/objednání předem",
@@ -89,7 +89,37 @@ const items: SlideImage[] = [
   {
     alt: "Halušky s úzeným masem klobásou a zelím",
     src: "/images/menu/menu_img18.jpg",
-    title: "Halušky s úzeným masem klobásou a zelím",
+    title: "Halušky s úzeným masem s klobásou a zelím",
+  },
+  {
+    alt: "Kureci rizek",
+    src: "/images/menu/menu_img19.jpg",
+    title: "Kuřecí řízek, bramborová kaše"
+  },
+  {
+    alt: "Menu image 20",
+    src: "/images/menu/menu_img20.jpg",
+    title: "Hranolky s balkánským sýrem"
+  },
+  {
+    alt: "Menu image 20",
+    src: "/images/menu/menu_img21.jpg",
+    title: "Topinky s pikantní masovou směsí,strouhaný sýr"
+  },
+  {
+    alt: "Menu image 20",
+    src: "/images/menu/menu_img22.jpg",
+    title: "Grilované vepřové koleno, křen, hořčice, chléb"
+  },
+  {
+    alt: "Menu image 20",
+    src: "/images/menu/menu_img23.jpg",
+    title: "Dlabačův hovězí guláš, houskový knedlík"
+  },
+  {
+    alt: "Menu image 20",
+    src: "/images/menu/menu_img24.jpg",
+    title: "Hovězí svíčková na smetaně, houskový knedlík"
   },
 ];
 
