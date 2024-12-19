@@ -40,16 +40,16 @@ export const StyledWrapper = styled.div(({ theme: { colors, devices } }) => ({
   position: "relative",
 
   [devices.desktop]: {
-    height: "80vh",
+    height: "100vh",
   },
 
   [devices.tablet]: {
-    height: 400,
+    height: 700,
   },
 
   "&::before": {
     background: "url(/images/new_year_bg.png) center top/100% auto no-repeat",
-    content: "''",
+    // content: "''",
     display: "none",
     position: "absolute",
     left: 0,
@@ -154,7 +154,6 @@ export const StyledText = styled.p(
 
 export const StyledHoliday = styled.div(({ theme: { colors, devices } }) => ({
   color: "white",
-  // fontStyle: "italic",
   fontWeight: "bold",
   fontSize: 27,
   position: "absolute",
@@ -162,7 +161,10 @@ export const StyledHoliday = styled.div(({ theme: { colors, devices } }) => ({
   right: 50,
 
   [devices.desktop]: {
-    display: "none",
+    bottom: 20,
+    left: 20,
+    right: "unset",
+    top: "unset",
   },
 
   "& > *": {
@@ -171,10 +173,18 @@ export const StyledHoliday = styled.div(({ theme: { colors, devices } }) => ({
 
   "& > p": {
     fontSize: 25,
+
+    [devices.desktop]: {
+      fontSize: 20,
+    },
   },
 
   "& > h3": {
     color: colors.beige,
+
+    [devices.desktop]: {
+      fontSize: 25,
+    },
   },
 }));
 

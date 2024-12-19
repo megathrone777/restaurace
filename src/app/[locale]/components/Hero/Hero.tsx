@@ -22,10 +22,10 @@ import {
 } from "./Hero.styled";
 
 const sliderOptions: SwiperProps = {
-  autoplay: {
-    delay: 6000,
-    pauseOnMouseEnter: true,
-  },
+  // autoplay: {
+  //   delay: 6000,
+  //   pauseOnMouseEnter: true,
+  // },
   effect: "fade",
   fadeEffect: {
     crossFade: true,
@@ -74,11 +74,9 @@ const Hero: React.FC = () => {
                   </StyledButtons>
                 </StyledContent>
 
-                <StyledHoliday>
-                  <h3>Přijmame objednávky na rezervace:</h3>
-                  <p>Štědrý den 24.12.2024: otevřeno od 18.00 -24.00</p>
-                  <p>Silvestr 31.12.2024: otevřeno od 18.00 - 5.00 - ?</p>
-                </StyledHoliday>
+                <StyledHoliday
+                  dangerouslySetInnerHTML={{ __html: t.raw("newYear") }}
+                />
               </StyledSlide>
             )
           )}
