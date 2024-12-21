@@ -22,10 +22,10 @@ import {
 } from "./Hero.styled";
 
 const sliderOptions: SwiperProps = {
-  // autoplay: {
-  //   delay: 6000,
-  //   pauseOnMouseEnter: true,
-  // },
+  autoplay: {
+    delay: 6000,
+    pauseOnMouseEnter: true,
+  },
   effect: "fade",
   fadeEffect: {
     crossFade: true,
