@@ -58,7 +58,8 @@
         "guests": "Minimum 1 guest",
         "name": "Name is required field",
         "phone": "Phone number is not valid",
-        "time": "Time is required field"
+        "time": "Time is required field",
+        "timeMin": "Minimum reservation time"
       },
       "submit": "Reserve",
       "text": "Possibility of restaurant reservation from 12:00 after agreement with the owner",

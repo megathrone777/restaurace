@@ -59,7 +59,8 @@
         "guests": "Minimálně 1 host",
         "name": "Jméno je povinné pole",
         "phone": "Telefonní číslo není platné",
-        "time": "Čas je povinné pole"
+        "time": "Čas je povinné pole",
+        "timeMin": "Minimální doba rezervace"
       },
       "submit": "Rezervovat",
       "success": "Vaše rezervace byla úspěšně přijata",
@@ -73,5 +74,5 @@
   },
   "schedule": "Pondělí - Neděle: 16:00 - 2:00",
   "support": "Podporujeme Ukrajinu.",
-  "newYear": "<h3>Přijmame objednávky na rezervace:</h3><p>Štědrý den 24.12.2024: otevřeno od 18.00 -24.00</p><p>Silvestr 31.12.2024: otevřeno od 18.00 - 5.00 - ?</p>"
+  "newYear": "<h3>Přijmame objednávky na rezervace:</h3><p>Štědrý den 24.12.2024: otevřeno od 18.00 - 24.00</p><p>Silvestr 31.12.2024: otevřeno od 18.00 - 5.00 - ?</p>"
 }

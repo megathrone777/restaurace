@@ -58,7 +58,8 @@
         "guests": "Mindestens 1 Gast",
         "name": "Name ist ein Pflichtfeld",
         "phone": "Die Telefonnummer ist ungültig",
-        "time": "Zeit ist ein Pflichtfeld"
+        "time": "Zeit ist ein Pflichtfeld",
+        "timeMin": "Mindestreservierungszeit"
       },
       "submit": "Buch",
       "text": "Reservierungen und Bestellungen sind jederzeit möglich",

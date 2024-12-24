@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useTranslations } from "next-intl";
 import { useFormik } from "formik";
+import moment from "moment";
 import { number, object, string } from "yup";
 
 import { Button, Container, Input, Spinner } from "~/theme/components";
@@ -35,7 +36,13 @@ const Form: React.FC = () => {
     phone: string()
       .matches(phonePattern, t("reservation.form.errors.phone"))
       .required(t("reservation.form.errors.phone")),
-    time: string().required(t("reservation.form.errors.time")),
+    time: string().test(
+      t("reservation.form.errors.time"),
+      `${t("reservation.form.errors.timeMin")} - 16:00`,
+      (value): boolean => {
+        return moment("16:00", "HH:mm").isSameOrBefore(moment(value, "HH:mm"));
+      }
+    ),
   });
   const {
     errors,

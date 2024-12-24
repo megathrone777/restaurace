@@ -1,23 +1,33 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const chatId = -4507786399;
+// interface TChatItem {
+//   message?: {
+//     text?: string;
+//   };
+// }
+
+const chatId = -1002331831164;
 
 export const POST = async (request: NextRequest): Promise<Response> => {
   try {
     // const responseAll = await fetch(
-    //   "https://api.telegram.org/bot8015378230:AAHUe4n6Gp4t75cImtOg_D_yU_AOU9BeKQU/getHistory",
-    //   {
-    //     body: JSON.stringify({
-    //       chat_id: chatId,
-    //     }),
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     method: "POST",
-    //   }
+    //   "https://api.telegram.org/bot8015378230:AAHUe4n6Gp4t75cImtOg_D_yU_AOU9BeKQU/getUpdates"
     // );
 
-    // console.log(await responseAll.json());
+    // if (responseAll.ok) {
+    //   const dataAll = await responseAll.json();
+    //   const items: string[] = [];
+
+    //   for (const item of dataAll.result as TChatItem[]) {
+    //     if (item.message && item.message.text) {
+    //       items.push(item.message.text);
+    //     }
+    //   }
+
+    //   console.log(items, "ITEMS");
+    // }
+
+    // return;
 
     const data = await request.json();
     const keys = Object.keys(data);
