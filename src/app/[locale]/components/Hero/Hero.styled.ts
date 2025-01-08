@@ -152,7 +152,7 @@ export const StyledText = styled.p(
   `
 );
 
-export const StyledHoliday = styled.div(({ theme: { colors, devices } }) => ({
+export const StyledHoliday = styled.div(({ theme: { devices } }) => ({
   color: "white",
   fontWeight: "bold",
   fontSize: 27,
@@ -180,7 +180,7 @@ export const StyledHoliday = styled.div(({ theme: { colors, devices } }) => ({
   },
 
   "& > h3": {
-    color: colors.beige,
+    // color: colors.beige,
 
     [devices.desktop]: {
       fontSize: 25,

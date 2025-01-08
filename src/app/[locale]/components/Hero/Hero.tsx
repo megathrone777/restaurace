@@ -14,7 +14,6 @@ import {
   StyledButtons,
   StyledImage,
   StyledContent,
-  StyledHoliday,
   StyledTitle,
   StyledText,
   StyledFlagWrapper,
@@ -65,6 +64,11 @@ const Hero: React.FC = () => {
                     {t("hero.text")}
                   </StyledText>
 
+                  <StyledText
+                    dangerouslySetInnerHTML={{ __html: t.raw("newYear") }}
+                    key={`${key}-subtext-${index}`}
+                  />
+
                   <StyledButtons key={`${key}-buttons-${index}`}>
                     <Button href="/reservation">
                       {t("reservation.title")}
@@ -73,10 +77,6 @@ const Hero: React.FC = () => {
                     <Socials />
                   </StyledButtons>
                 </StyledContent>
-
-                <StyledHoliday
-                  dangerouslySetInnerHTML={{ __html: t.raw("newYear") }}
-                />
               </StyledSlide>
             )
           )}
