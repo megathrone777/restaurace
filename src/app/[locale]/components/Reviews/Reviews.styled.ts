@@ -46,6 +46,20 @@ export const StyledSlide = styled(SwiperSlide)({
   textAlign: "left",
 });
 
+export const StyledVideoSlide = styled(SwiperSlide)({
+  borderRadius: 8,
+  border: "1px solid rgba(0, 0, 0, .1)",
+  display: "block",
+  height: "auto",
+  overflow: "hidden",
+});
+
+export const StyledVideo = styled.video({
+  display: "block",
+  height: "100%",
+  width: "100%",
+});
+
 export const StyledLayout = styled.div({
   marginBottom: 15,
 });

@@ -14,6 +14,8 @@ import {
   StyledTitle,
   StyledSlider,
   StyledSlide,
+  StyledVideoSlide,
+  StyledVideo,
   StyledLayout,
   StyledHeader,
   StyledText,
@@ -65,33 +67,44 @@ const Reviews: React.FC = () => {
                 { author, date, rating, text, type }: TSliderItem,
                 index: number
               ): React.ReactElement => (
-                <StyledSlide key={`reviews-slide-${index}`}>
-                  <StyledLayout>
-                    <StyledHeader>
-                      <div>
-                        <StyledAuthor>{author}</StyledAuthor>
-                        <StyledDate>{date}</StyledDate>
-                      </div>
+                <React.Fragment key={`reviews-slide-${index}`}>
+                  <StyledSlide>
+                    <StyledLayout>
+                      <StyledHeader>
+                        <div>
+                          <StyledAuthor>{author}</StyledAuthor>
+                          <StyledDate>{date}</StyledDate>
+                        </div>
 
-                      <StyledIcon
-                        title={`${type.charAt(0).toUpperCase()}${type.slice(
-                          1
-                        )}`}
-                      >
-                        <Icon id={type} />
-                      </StyledIcon>
-                    </StyledHeader>
+                        <StyledIcon
+                          title={`${type.charAt(0).toUpperCase()}${type.slice(
+                            1
+                          )}`}
+                        >
+                          <Icon id={type} />
+                        </StyledIcon>
+                      </StyledHeader>
 
-                    <StyledText>{text}</StyledText>
-                  </StyledLayout>
+                      <StyledText>{text}</StyledText>
+                    </StyledLayout>
 
-                  <Rating
-                    {...{ rating }}
-                    starDimension="32px"
-                    starRatedColor={colors.beige}
-                    starSpacing="2px"
-                  />
-                </StyledSlide>
+                    <Rating
+                      {...{ rating }}
+                      starDimension="32px"
+                      starRatedColor={colors.beige}
+                      starSpacing="2px"
+                    />
+                  </StyledSlide>
+
+                  {index === 5 && (
+                    <StyledVideoSlide>
+                      <StyledVideo
+                        controls
+                        src="/video_slide.mp4"
+                      ></StyledVideo>
+                    </StyledVideoSlide>
+                  )}
+                </React.Fragment>
               )
             )}
           </StyledSlider>
