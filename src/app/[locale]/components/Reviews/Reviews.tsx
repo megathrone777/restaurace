@@ -4,6 +4,7 @@ import Rating from "react-star-ratings";
 import { type SwiperProps } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import { useTranslations } from "next-intl";
+import { v4 } from "uuid";
 
 import { useTheme } from "~/theme";
 import { Container, Icon } from "~/theme/components";
@@ -67,8 +68,8 @@ const Reviews: React.FC = () => {
                 { author, date, rating, text, type }: TSliderItem,
                 index: number
               ): React.ReactElement => (
-                <React.Fragment key={`reviews-slide-${index}`}>
-                  <StyledSlide>
+                <React.Fragment key={v4()}>
+                  <StyledSlide key={v4()}>
                     <StyledLayout>
                       <StyledHeader>
                         <div>
@@ -96,8 +97,8 @@ const Reviews: React.FC = () => {
                     />
                   </StyledSlide>
 
-                  {index === 5 && (
-                    <StyledVideoSlide>
+                  {index % 4 === 0 && (
+                    <StyledVideoSlide key={v4()}>
                       <StyledVideo
                         controls
                         src="/video_slide.mp4"
