@@ -1,11 +1,11 @@
 import type { TContactItem } from "./Contacts.types";
 
 const items: TContactItem[] = [
-  {
-    iconId: "phone",
-    text: "+420 774 440 978",
-    url: "tel:+420774440978",
-  },
+  // {
+  //   iconId: "phone",
+  //   text: "+420 774 440 978",
+  //   url: "tel:+420774440978",
+  // },
   {
     iconId: "phone",
     text: "+420 703 699 929",
