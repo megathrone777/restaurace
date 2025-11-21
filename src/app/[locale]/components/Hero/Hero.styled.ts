@@ -48,17 +48,31 @@ export const StyledWrapper = styled.div(({ theme: { colors, devices } }) => ({
   },
 
   "&::before": {
-    background: "url(/images/new_year_bg.png) center top/100% auto no-repeat",
-    // content: "''",
-    display: "none",
-    position: "absolute",
-    left: 0,
-    right: 0,
-    top: 0,
+    background:
+      "url(/images/hero/christmas_bg.png) center top/100% auto no-repeat",
     bottom: 0,
-    height: "100%",
+    content: "''",
+    height: 400,
+    left: 0,
+    opacity: 0.5,
+    pointerEvents: "none",
+    position: "absolute",
+    right: 0,
     width: "100%",
     zIndex: 2000,
+
+    [devices.tablet]: {
+      height: 200,
+    },
+
+    [devices.mobile]: {
+      backgroundSize: "cover",
+      height: 150,
+    },
+
+    [devices.mobileSm]: {
+      height: 110,
+    },
   },
 }));
 

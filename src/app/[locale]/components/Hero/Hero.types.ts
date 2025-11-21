@@ -3,3 +3,7 @@ export interface TSliderItem {
   text: keyof IntlMessages["hero"];
   title: keyof IntlMessages["hero"];
 }
+
+export interface TProps {
+  newYear: boolean;
+}
