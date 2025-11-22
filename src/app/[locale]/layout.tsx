@@ -46,4 +46,5 @@ const Layout: React.FC<TProps> = async ({ children, params: { locale } }) => {
   );
 };
 
+export { viewport } from "./viewport";
 export default Layout;
