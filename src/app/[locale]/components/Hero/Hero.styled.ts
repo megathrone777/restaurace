@@ -59,7 +59,7 @@ export const StyledWrapper = styled.div(({ theme: { colors, devices } }) => ({
     position: "absolute",
     right: 0,
     width: "100%",
-    zIndex: 2000,
+    zIndex: 799,
 
     [devices.tablet]: {
       height: 200,
