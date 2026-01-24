@@ -48,10 +48,9 @@ export const StyledWrapper = styled.div(({ theme: { colors, devices } }) => ({
   },
 
   "&::before": {
-    background:
-      "url(/images/hero/christmas_bg.png) center top/100% auto no-repeat",
+    // background: "url(/images/hero/christmas_bg.png) center top/100% auto no-repeat",
     bottom: 0,
-    content: "''",
+    // content: "''",
     height: 400,
     left: 0,
     opacity: 0.5,

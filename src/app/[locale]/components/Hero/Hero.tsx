@@ -48,7 +48,8 @@ const Hero: React.FC = () => {
       {items && !!items.length && (
         <StyledSlider
           {...sliderOptions}
-          onSlideChangeTransitionStart={handleSlideChangeTransitionStart}>
+          onSlideChangeTransitionStart={handleSlideChangeTransitionStart}
+        >
           {items.map(
             (item: string, index: number): React.ReactElement => (
               <StyledSlide key={`hero-slide-${index}`}>
@@ -64,7 +65,7 @@ const Hero: React.FC = () => {
                   </StyledText>
 
                   <StyledText
-                    dangerouslySetInnerHTML={{ __html: t.raw("newYear") }}
+                    dangerouslySetInnerHTML={{ __html: t.raw("auction") }}
                     key={`${key}-subtext-${index}`}
                   />
 
@@ -77,7 +78,7 @@ const Hero: React.FC = () => {
                   </StyledButtons>
                 </StyledContent>
               </StyledSlide>
-            )
+            ),
           )}
         </StyledSlider>
       )}
